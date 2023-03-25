@@ -5,7 +5,7 @@ import Slider from "../components/Slider";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { FiGithub, FiCheck } from "react-icons/fi";
 
-export default function portfolio() {
+export default function Portfolio() {
   const images = [
     { path: "/image/stringlab/stringlab1.png", alt: "stringlab1" },
     { path: "/image/stringlab/stringlab2.png", alt: "stringlab2" },

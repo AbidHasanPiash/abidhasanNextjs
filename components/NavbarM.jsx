@@ -23,10 +23,10 @@ export default function NavbarM() {
               >
                 <span
                   className={`text-xl cursor-pointer duration-300 ${
-                    menu.link === active && "-mt-7"
+                    menu.link === active && "-mt-7 bg-transparent shadow-2xl shadow-purple-500 text-white"
                   }`}
                 >
-                  {menu.icon}
+                  <i className="bg-white">{menu.icon}</i>
                 </span>
                 <span
                   className={` ${

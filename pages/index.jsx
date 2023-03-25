@@ -29,6 +29,7 @@ export default function Home() {
             </div>
             <Image 
               src={ProfilePicture} 
+              priority
               alt="ProfilePicture"
               className='mx-auto object-cover lg:hover:scale-110 duration-200'
             />
