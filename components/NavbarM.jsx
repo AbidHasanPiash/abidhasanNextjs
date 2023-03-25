@@ -10,13 +10,6 @@ export default function NavbarM() {
     { name: "Portfolio", icon: <RiCodeBoxFill />, link: "/portfolio" },
     { name: "About", icon: <RiUser6Fill />, link: "/about" },
   ];
-  //   const Menus = [
-  //     { name: "Home", icon: <FiMeh />, dis: "translate-x-0" },
-  //     { name: "Profile", icon: <FiMeh />, dis: "translate-x-16" },
-  //     { name: "Message", icon: <FiMeh />, dis: "translate-x-32" },
-  //     { name: "Photos", icon: <FiMeh />, dis: "translate-x-48" },
-  //     { name: "Settings", icon: <FiMeh />, dis: "translate-x-64" },
-  //   ];
   const [active, setActive] = useState(location.asPath);
   return (
     <div className="lg:hidden fixed left-0 right-0 bottom-0 bg-slate-900 border border-purple-900 px-6 m-2 rounded-full">
@@ -30,7 +23,7 @@ export default function NavbarM() {
               >
                 <span
                   className={`text-xl cursor-pointer duration-300 ${
-                    menu.link === active && "-mt-7 z-10 text-3xl"
+                    menu.link === active && "-mt-7"
                   }`}
                 >
                   {menu.icon}
@@ -48,10 +41,6 @@ export default function NavbarM() {
             </Link>
           </li>
         ))}
-        {/* <span className={`bg-rose-600 duration-500 ${Menus[active].dis} border-4 border-gray-900 h-16 w-16 absolute -top-5 rounded-full`}>
-          <span className="w-3.5 h-3.5 bg-transparent absolute top-4 -left-[18px] rounded-tr-[11px] shadow-myShadow1"></span>
-          <span className="w-3.5 h-3.5 bg-transparent absolute top-4 -right-[18px] rounded-tl-[11px] shadow-myShadow2"></span>
-        </span> */}
       </ul>
     </div>
   );
