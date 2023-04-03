@@ -4,11 +4,11 @@ import NavbarM from "./NavbarM"
 export default function Layout({ children }) {
   return (
     <>
-      <Navbar />
+      {location.asPath != '/backofabid' && <Navbar />}
       <main>
         {children}
       </main>
-      <NavbarM/>
+      {location.asPath != '/backofabid' && <NavbarM/>}
     </>
   )
 }
