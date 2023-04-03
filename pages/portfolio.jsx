@@ -35,11 +35,6 @@ export default function Portfolio() {
               </Link>
             </div>
           </div>
-        </div>
-        <div className="lg:max-w-7xl lg:mx-auto mx-3">
-          <h1 className="text-2xl text-center font-bold py-3">
-            Some of my Web Applications.
-          </h1>
           <div className="w-full flex items-center justify-center">
             <div className="ring p-6 rounded-xl">
               <Link href={'/backofabid'}>
