@@ -1,16 +1,14 @@
 import Navbar from "./Navbar"
 import NavbarM from "./NavbarM"
-import { useRouter } from "next/router";
 
 export default function Layout({ children }) {
-  const location = useRouter();
   return (
     <>
-      {location.asPath != '/bankofabid' && <Navbar />}
+      {location.asPath != '/backofabid' && <Navbar />}
       <main>
         {children}
       </main>
-      {location.asPath != '/bankofabid' && <NavbarM/>}
+      {location.asPath != '/backofabid' && <NavbarM/>}
     </>
   )
 }
