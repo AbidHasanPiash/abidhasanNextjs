@@ -6,7 +6,7 @@ import { ImPhone } from "react-icons/im";
 import { SiGithub, SiLinkedin, SiGmail, SiFacebook } from "react-icons/si";
 
 
-export default function about() {
+export default function About() {
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
