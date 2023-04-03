@@ -8,7 +8,7 @@ const Navbar = () => {
         <span onClick={()=>router.back()} className='cursor-pointer duration-200 hover:scale-110 hover:text-purple-500'>
             <TbArrowLeftCircle size={45}/>
         </span>
-        <h1 className='text-xl font-bold select-none '>Bank of Abid</h1>
+        <h1 className='text-xl font-bold select-none'>Bank of Abid</h1>
     </div>
   );
 };

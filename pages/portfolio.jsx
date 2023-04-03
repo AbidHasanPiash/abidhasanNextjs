@@ -28,7 +28,7 @@ export default function Portfolio() {
             <div className="ring p-6 rounded-xl">
               <Link href={'/bankofabid'}>
                 <div className="flex space-x-2 items-center justify-start text-xl">
-                  <button>Bank of Abid </button>
+                  <button>Bank of Abid</button>
                   <HiOutlineExternalLink/>
                 </div>
               </Link>
