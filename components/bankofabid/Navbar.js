@@ -1,17 +1,15 @@
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import { Container } from "@mui/system";
+import { useRouter } from 'next/router';
+import {TbArrowLeftCircle} from 'react-icons/tb'
 
 const Navbar = () => {
+  const router = useRouter();
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar>
-          <Typography variant="h5">Bank of React</Typography>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <div className="flex items-center justify-between h-20">
+        <span onClick={()=>router.back()} className='cursor-pointer duration-200 hover:scale-110 hover:text-purple-500'>
+            <TbArrowLeftCircle size={45}/>
+        </span>
+        <h1 className='text-xl font-bold'>Bank of Abid</h1>
+    </div>
   );
 };
 

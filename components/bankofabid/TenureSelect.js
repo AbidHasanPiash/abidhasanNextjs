@@ -10,7 +10,7 @@ const TenureSelect = ({ data, setData }) => {
   };
 
   return (
-    <FormControl fullWidth>
+    <FormControl fullWidth className="text-white">
       <InputLabel id="demo-simple-select-label">Tenure</InputLabel>
       <Select
         labelId="demo-simple-select-label"
