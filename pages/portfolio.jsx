@@ -20,6 +20,7 @@ export default function Portfolio() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="z-0">
+        {/* some web app */}
         <div className="lg:max-w-7xl lg:mx-auto mx-3">
           <h1 className="text-2xl text-center font-bold py-3">
             Some of my Web Applications.
