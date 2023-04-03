@@ -22,21 +22,6 @@ export default function Portfolio() {
       <div className="z-0">
         <div className="lg:max-w-7xl lg:mx-auto mx-3">
           <h1 className="text-2xl text-center font-bold py-3">
-            Some of my Web Applications.
-          </h1>
-          <div className="w-full flex items-center justify-center">
-            <div className="ring p-6 rounded-xl">
-              <Link href={'/backofabid'}>
-                <div className="flex space-x-2 items-center justify-start text-xl">
-                  <button>Bank of Abid </button>
-                  <HiOutlineExternalLink/>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="lg:max-w-7xl lg:mx-auto mx-3">
-          <h1 className="text-2xl text-center font-bold py-3">
             Showcasing My Front-End Craftsmanship
           </h1>
           {/* Content with slider */}
