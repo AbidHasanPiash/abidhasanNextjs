@@ -6,11 +6,11 @@ export default function Layout({ children }) {
   const location = useRouter();
   return (
     <>
-      {location.asPath != '/backofabid' && <Navbar />}
+      {location.asPath != '/bankofabid' && <Navbar />}
       <main>
         {children}
       </main>
-      {location.asPath != '/backofabid' && <NavbarM/>}
+      {location.asPath != '/bankofabid' && <NavbarM/>}
     </>
   )
 }
