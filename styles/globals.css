@@ -9,6 +9,7 @@ body{
     font-family: 'Roboto Mono', monospace;
     color: #cbd5e1;
     margin-bottom: 10em;
+    overflow-x: hidden;
 }
 #profile{
     transform-style: preserve-3d;
