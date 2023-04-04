@@ -56,7 +56,7 @@ export default function About() {
               <p className="mb-4 lg:text-md text-sm">
                 Hi there! My name is Abid Hasan and I am a frontend developer. I
                 have a year of experience working with web technologies,
-                including HTML, CSS, React and Tailwind CSS.
+                including HTML, CSS, React js, Next js and Tailwind CSS.
               </p>
               <p className="mb-4 lg:text-md text-sm">
                 I am passionate about creating intuitive, user-friendly web
