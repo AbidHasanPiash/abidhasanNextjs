@@ -21,7 +21,7 @@ const SliderSelect = ({ data, setData }) => {
         steps={100}
         unit="$"
         amount={data.homeValue}
-        label="Home Value"
+        label="Loan Value"
         value={data.homeValue}
       />
 
