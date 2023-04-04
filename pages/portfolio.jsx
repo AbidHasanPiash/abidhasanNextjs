@@ -66,9 +66,9 @@ export default function Portfolio() {
                 </div>
               </div>
             </div>
-            <div className="absolute z-0 lg:w-40 lg:h-40 w-36 h-36 animate-spin-slow top-1/4 left-10 bg-opacity-20 bg-gradient-to-r from-blue-900 to-purple-700 rounded-full"></div>
+            <div className="absolute z-0 lg:w-32 lg:h-32 w-36 h-36 animate-spin-slow top-1/4 lg:left-28 left-0 bg-opacity-20 bg-gradient-to-r from-blue-900 to-purple-700 rounded-full"></div>
             <div className="absolute z-0 lg:w-60 lg:h-60 w-44 h-44 animate-spin-slow bottom-0 right-1/2 bg-opacity-20 bg-gradient-to-r from-rose-500 to-purple-500 rounded-full"></div>
-            <div className="absolute z-0 lg:w-40 lg:h-40 w-36 h-36 animate-spin-slow top-1/3 right-20 bg-opacity-20 bg-gradient-to-r from-emerald-700 to-cyan-500 rounded-full"></div>
+            <div className="absolute z-0 lg:w-40 lg:h-40 w-36 h-36 animate-spin-slow top-1/3 lg:right-20 right-0 bg-opacity-20 bg-gradient-to-r from-emerald-700 to-cyan-500 rounded-full"></div>
           </div>
         </div>
         {/* ============Website=========== */}
