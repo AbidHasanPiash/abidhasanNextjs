@@ -10,3 +10,8 @@ body{
     color: #cbd5e1;
     margin-bottom: 10em;
 }
+#profile{
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transform: translateZ(20px);
+}
