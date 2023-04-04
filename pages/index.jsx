@@ -14,7 +14,7 @@ export default function Home() {
       max: 25,
       speed: 400,
       glare: true,
-      "max-glare": 0.5,
+      "max-glare": 1,
     });
   }, []);
   return (
@@ -25,10 +25,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='font-custom bg-slate-900 text-slate-300'>
+      <main>
         <div className='lg:max-w-7xl lg:mx-auto mx-3 grid grid-cols-2 gap-4 mb-5 select-none'>
           {/* Profile picture */}
-          <div id='profile' className='col-span-2 lg:col-span-1 lg:w-96 w-full my-4 flex flex-col overflow-hidden rounded-xl ring-1 ring-purple-900 shadow-2xl shadow-purple-500'>
+          <div id='profile' className='tilt-container col-span-2 lg:col-span-1 lg:w-96 w-full my-4 flex flex-col overflow-hidden rounded-xl ring-1 ring-purple-900 shadow-2xl shadow-purple-500'>
             <div className='flex items-center justify-between py-2 px-4 text-xl border-b border-slate-600'>
               <h1>Abid Hasan.</h1>
               <div className='flex items-center justify-center space-x-3'>
