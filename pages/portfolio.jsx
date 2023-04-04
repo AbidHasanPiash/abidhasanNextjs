@@ -21,45 +21,47 @@ export default function Portfolio() {
       </Head>
       <div className="z-0 h-screen">
         {/* ============Webapps=========== */}
-        <div className="relative h-1/2 lg:max-w-7xl lg:mx-auto mx-3 my-10">
-          <h1 className="text-2xl text-center font-bold my-10">
-            Some of my Web Applications.
-          </h1>
-          <div className="relative z-10 grid grid-cols-2 gap-3">
-            {/* ****** */}
-            <div className="flex flex-col items-center justify-center">
-              <div className="relative w-1/2 py-28 shadow-5xl backdrop-filter backdrop-blur-sm border border-r-0 border-b-0 border-gray-100/30 bg-white/10 p-6 rounded-xl">
-                <h1 className="text-8xl absolute top-0 right-0 font-extrabold text-white/20">01</h1>
-                <h1 className="text-sm text-justify pb-5">A web tool that can help you estimate your monthly mortgage payments. 
-                </h1>
-                <Link href={'/bankofabid'}>
-                  <div className="flex space-x-2 items-center justify-center text-xl border border-purple-500 rounded-full w-fit mx-auto px-3 py-1 
-                    hover:shadow-neon hover:shadow-purple-500 hover:bg-purple-500 hover: text-white">
-                    <button>Bank of Abid </button>
-                    <HiOutlineExternalLink/>
-                  </div>
-                </Link>
+        <div className="block lg:h-1/2 lg:max-w-7xl lg:mx-auto mx-3 my-10">
+          <div className="relative h-full text-white/80">
+            <h1 className="text-2xl text-center font-bold my-10">
+              Some of my Web Applications.
+            </h1>
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-3">
+              {/* ****** */}
+              <div className="flex flex-col items-center justify-center">
+                <div className="lg:w-1/2 mx-10 my-5 lg:mx-0 lg:my-0 py-28 shadow-5xl backdrop-filter backdrop-blur-sm border border-r-0 border-b-0 border-gray-100/30 bg-white/10 p-6 rounded-xl">
+                  <h1 className="text-8xl absolute top-0 right-0 font-extrabold text-white/20">01</h1>
+                  <h1 className="text-sm text-justify pb-5">A web tool that can help you estimate your monthly mortgage payments. 
+                  </h1>
+                  <Link href={'/bankofabid'}>
+                    <div className="flex space-x-2 items-center justify-center text-xl border border-purple-500 rounded-full w-fit mx-auto px-3 py-1 
+                      hover:shadow-neon hover:shadow-purple-500 hover:bg-purple-500 hover: text-white">
+                      <button>Bank of Abid </button>
+                      <HiOutlineExternalLink/>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              {/* ****** */}
+              <div className="flex flex-col items-center justify-center">
+                <div className="lg:w-1/2 mx-10 my-5 lg:mx-0 lg:my-0 py-28 shadow-5xl backdrop-filter backdrop-blur-sm border border-r-0 border-b-0 border-gray-100/30 bg-white/10 p-6 rounded-xl">
+                  <h1 className="text-8xl absolute top-0 right-0 font-extrabold text-white/20">02</h1>
+                  <h1 className="text-sm text-justify pb-5">A web tool that can help you estimate your monthly mortgage payments. 
+                  </h1>
+                  <Link href={'/bankofabid'}>
+                    <div className="flex space-x-2 items-center justify-center text-xl border border-purple-500 rounded-full w-fit mx-auto px-3 py-1 
+                      hover:shadow-neon hover:shadow-purple-500 hover:bg-purple-500 hover: text-white">
+                      <button>Bank of Abid </button>
+                      <HiOutlineExternalLink/>
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
-            {/* ****** */}
-            <div className="flex flex-col items-center justify-center">
-              <div className="relative w-1/2 py-28 shadow-5xl backdrop-filter backdrop-blur-sm border border-r-0 border-b-0 border-gray-100/30 bg-white/10 p-6 rounded-xl">
-                <h1 className="text-8xl absolute top-0 right-0 font-extrabold text-white/20">02</h1>
-                <h1 className="text-sm text-justify pb-5">A web tool that can help you estimate your monthly mortgage payments. 
-                </h1>
-                <Link href={'/bankofabid'}>
-                  <div className="flex space-x-2 items-center justify-center text-xl border border-purple-500 rounded-full w-fit mx-auto px-3 py-1 
-                    hover:shadow-neon hover:shadow-purple-500 hover:bg-purple-500 hover: text-white">
-                    <button>Bank of Abid </button>
-                    <HiOutlineExternalLink/>
-                  </div>
-                </Link>
-              </div>
-            </div>
+            <div className="absolute z-0 lg:w-40 lg:h-40 w-36 h-36 animate-spin-slow top-1/4 left-10 bg-opacity-20 bg-gradient-to-r from-blue-900 to-purple-700 rounded-full"></div>
+            <div className="absolute z-0 lg:w-60 lg:h-60 w-44 h-44 animate-spin-slow bottom-0 right-1/2 bg-opacity-20 bg-gradient-to-r from-rose-500 to-purple-500 rounded-full"></div>
+            <div className="absolute z-0 lg:w-40 lg:h-40 w-36 h-36 animate-spin-slow top-1/3 right-20 bg-opacity-20 bg-gradient-to-r from-emerald-700 to-cyan-500 rounded-full"></div>
           </div>
-          <div className="absolute z-0 animate-spin-slow top-1/4 left-10 w-40 h-40 bg-opacity-20 bg-gradient-to-r from-blue-900 to-purple-700 rounded-full"></div>
-          <div className="absolute z-0 animate-spin-slow bottom-0 right-1/2 w-60 h-60 bg-opacity-20 bg-gradient-to-r from-rose-500 to-purple-500 rounded-full"></div>
-          <div className="absolute z-0 animate-spin-slow top-1/3 right-20 w-40 h-40 bg-opacity-20 bg-gradient-to-r from-emerald-700 to-cyan-500 rounded-full"></div>
         </div>
         {/* ============Website=========== */}
         <div className="lg:max-w-7xl lg:mx-auto mx-3">
