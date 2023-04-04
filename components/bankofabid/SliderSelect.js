@@ -1,6 +1,6 @@
 import React from "react";
 // import { Container, Typography } from "@mui/material";
-import SliderComponent from "./Common/SliderComponent";
+import SliderComponent from "./common/SliderComponent";
 
 const SliderSelect = ({ data, setData }) => {
   const bank_limit = 10000;
