@@ -74,7 +74,7 @@ export default function Portfolio() {
           </div>
         </div>
         {/* ============Extra text=========== */}
-        <div className="h-screen lg:max-w-7xl lg:mx-auto mx-3">
+        <div className="h-1/2 lg:max-w-7xl lg:mx-auto mx-3">
           <div className="flex flex-col items-center justify-center">
             <div className="text-center">
               <h1 className="text-4xl font-bold">&quot;<span className="text-7xl">Art</span> is not what you see,
