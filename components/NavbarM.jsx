@@ -12,7 +12,7 @@ export default function NavbarM() {
   ];
   const [active, setActive] = useState(location.asPath);
   return (
-    <div className="lg:hidden fixed left-0 right-0 bottom-0 bg-slate-900 border border-purple-900 px-6 m-2 rounded-full">
+    <div className="z-50 lg:hidden fixed left-0 right-0 bottom-0 bg-slate-900 border border-purple-900 px-6 m-2 rounded-full">
       <ul className="flex items-center justify-between">
         {Menus.map((menu, i) => (
           <li key={i} className="w-screen">

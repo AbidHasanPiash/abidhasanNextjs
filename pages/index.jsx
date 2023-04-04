@@ -5,8 +5,18 @@ import {RiCloseFill} from 'react-icons/ri';
 import {SiReact, SiNodedotjs, SiHtml5, SiCss3, SiJavascript, SiTailwindcss, SiFirebase, SiGithub, SiJira, SiCanva} from 'react-icons/si';
 import {FiSquare, FiMinus} from 'react-icons/fi';
 import TextWithColor from '@/components/TextWithColor';
+import VanillaTilt from 'vanilla-tilt';
+import React, {useEffect} from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    VanillaTilt.init(document.querySelector("#profile"), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      "max-glare": 1,
+    });
+  }, []);
   return (
     <>
       <Head>
@@ -15,10 +25,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='font-custom bg-slate-900 text-slate-300'>
+      <main>
         <div className='lg:max-w-7xl lg:mx-auto mx-3 grid grid-cols-2 gap-4 mb-5 select-none'>
           {/* Profile picture */}
-          <div className='col-span-2 lg:col-span-1 lg:w-96 w-full my-4 flex flex-col overflow-hidden rounded-xl ring-1 ring-purple-900 shadow-2xl shadow-purple-500'>
+          <div id='profile' className='tilt-container col-span-2 lg:col-span-1 lg:w-96 w-full my-4 flex flex-col overflow-hidden rounded-xl ring-1 ring-purple-900 shadow-2xl shadow-purple-500'>
             <div className='flex items-center justify-between py-2 px-4 text-xl border-b border-slate-600'>
               <h1>Abid Hasan.</h1>
               <div className='flex items-center justify-center space-x-3'>
@@ -30,8 +40,9 @@ export default function Home() {
             <Image 
               src={ProfilePicture} 
               priority
+              draggable="false"
               alt="ProfilePicture"
-              className='mx-auto object-cover lg:hover:scale-110 duration-200'
+              className='mx-auto object-cover select-none lg:hover:scale-110 duration-300 transform z-20'
             />
           </div>
           {/* Text about me */}

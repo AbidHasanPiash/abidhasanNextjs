@@ -16,7 +16,7 @@ const SliderComponent = ({ defaultValue, min, max, label, unit, onChange, amount
       <Slider
           min={min}
           max={max}
-          defaultValue={defaultValue}
+          defaultValue={parseInt(defaultValue)}
           aria-label="Default"
           valueLabelDisplay="auto"
           onChange={onChange}

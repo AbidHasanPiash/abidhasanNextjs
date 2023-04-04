@@ -18,6 +18,7 @@ I'm a front-end developer. I love to work with React with its framework Next Js.
 - react-chartjs-2
 - react-icons
 - typewriter-effect
+- vanilla-tilt
 
 
 ## Run Locally

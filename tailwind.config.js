@@ -6,10 +6,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",],
   theme: {
     extend: {
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
       boxShadow: {
         neon: '0px 5px 50px 12px',
-        myShadow1: "4.1px -5px 0 0 rgb(17,24,39)",
-        myShadow2: "-4.1px -5px 0 0 rgb(17,24,39)",
+        '5xl': "20px 20px 50px rgb(0, 0, 0, 0.5)",
       },
       fontFamily: {
         custom: ['Roboto Mono', 'monospace'],
