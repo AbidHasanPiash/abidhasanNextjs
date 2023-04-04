@@ -6,6 +6,7 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 import { FiGithub, FiCheck } from "react-icons/fi";
 import VanillaTilt from 'vanilla-tilt';
 import React, {useEffect} from 'react';
+import image1 from '../public/image/parallax/image1.jpg'
 
 export default function Portfolio() {
   useEffect(() => {
@@ -72,8 +73,18 @@ export default function Portfolio() {
             <div className="absolute z-0 lg:w-40 lg:h-40 w-36 h-36 animate-spin-slow top-1/3 lg:right-20 right-0 bg-opacity-20 bg-gradient-to-r from-emerald-700 to-cyan-500 rounded-full"></div>
           </div>
         </div>
+        {/* ============Extra text=========== */}
+        <div className="h-screen lg:max-w-7xl lg:mx-auto mx-3">
+          <div className="flex flex-col items-center justify-center">
+            <div className="text-center">
+              <h1 className="text-4xl font-bold">&quot;<span className="text-7xl">Art</span> is not what you see,
+                <br />but what you <span className="text-7xl">make</span> others see.&quot;</h1>
+              <p className="text-right mt-4">- Edgar Degas</p>
+            </div>
+          </div>
+        </div>
         {/* ============Website=========== */}
-        <div className="lg:max-w-7xl lg:mx-auto mx-3">
+        <div className="h-screen lg:max-w-7xl lg:mx-auto mx-3">
           <h1 className="text-2xl text-center font-bold my-10">
             Showcasing My Front-End Craftsmanship
           </h1>
