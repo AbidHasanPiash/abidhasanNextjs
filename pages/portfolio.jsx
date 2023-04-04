@@ -12,6 +12,7 @@ export default function Portfolio() {
     VanillaTilt.init(document.querySelectorAll("#tilt"), {
       max: 25,
       speed: 400,
+      gyroscope: false,
     });
   }, []);
   const images = [
