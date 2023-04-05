@@ -54,6 +54,9 @@ export default function Portfolio() {
               <h1 className="lg:text-4xl text-lg font-bold">&quot;<span className="lg:text-7xl text-2xl">Art</span> is not what you see,
                 <br />but what you <span className="lg:text-7xl text-2xl">make</span> others see.&quot;</h1>
               <p className="text-right mt-4">- Edgar Degas</p>
+              <ParallaxLayer speed={1}>
+              <div className="absolute top-1/2 inset-x-1/2 z-0 lg:w-40 lg:h-40 w-36 h-36 animate-spin-slow bg-opacity-20 bg-gradient-to-r from-emerald-700 to-cyan-500 rounded-full"></div>
+              </ParallaxLayer>
             </div>
           </div>
         </div>
