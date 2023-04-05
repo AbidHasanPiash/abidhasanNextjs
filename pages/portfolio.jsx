@@ -6,6 +6,7 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 import { FiGithub, FiCheck } from "react-icons/fi";
 import VanillaTilt from 'vanilla-tilt';
 import React, {useEffect} from 'react';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 export default function Portfolio() {
   useEffect(() => {
@@ -28,9 +29,11 @@ export default function Portfolio() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="z-0 h-screen">
+      <Parallax pages={2}>
+      <div className="z-0 overflow-y-auto scrollbar-none">
         {/* ============Webapps=========== */}
-        <div className="block lg:h-1/2 lg:max-w-7xl lg:mx-auto mx-3 my-10">
+        <ParallaxLayer speed={0.7} factor={0.5}  style={{ backgroundColor: '#0f172a' }} className="z-10">
+        <div className="h-screen lg:h-fit lg:max-w-7xl lg:mx-auto mx-3 my-10 bg-[#0f172a]">
           <div className="relative h-full text-white/80">
             <h1 className="text-2xl text-center font-bold my-10">
               Some of my Web Applications.
@@ -67,13 +70,31 @@ export default function Portfolio() {
                 </div>
               </div>
             </div>
+            <ParallaxLayer speed={0.5}>
             <div className="absolute z-0 lg:w-32 lg:h-32 w-36 h-36 animate-spin-slow top-1/4 lg:left-28 left-0 bg-opacity-20 bg-gradient-to-r from-blue-900 to-purple-700 rounded-full"></div>
+            </ParallaxLayer>
             <div className="absolute z-0 lg:w-60 lg:h-60 w-44 h-44 animate-spin-slow bottom-0 right-1/2 bg-opacity-20 bg-gradient-to-r from-rose-500 to-purple-500 rounded-full"></div>
+            <ParallaxLayer speed={1}>
             <div className="absolute z-0 lg:w-40 lg:h-40 w-36 h-36 animate-spin-slow top-1/3 lg:right-20 right-0 bg-opacity-20 bg-gradient-to-r from-emerald-700 to-cyan-500 rounded-full"></div>
+            </ParallaxLayer>
           </div>
         </div>
-        {/* ============Website=========== */}
+        </ParallaxLayer>
+        {/* ============Extra text=========== */}
+        <ParallaxLayer offset={0.7} speed={-0.5} factor={0.5} className="z-0">
         <div className="lg:max-w-7xl lg:mx-auto mx-3">
+          <div className="flex flex-col items-center justify-center">
+            <div className="text-center">
+              <h1 className="lg:text-4xl text-lg font-bold">&quot;<span className="lg:text-7xl text-2xl">Art</span> is not what you see,
+                <br />but what you <span className="lg:text-7xl text-2xl">make</span> others see.&quot;</h1>
+              <p className="text-right mt-4">- Edgar Degas</p>
+            </div>
+          </div>
+        </div>
+        </ParallaxLayer>
+        {/* ============Website=========== */}
+        <ParallaxLayer offset={1} factor={1.5} speed={1.5} style={{ backgroundColor: '#0f172a' }}>
+        <div className="h-fit lg:max-w-7xl lg:mx-auto mx-3">
           <h1 className="text-2xl text-center font-bold my-10">
             Showcasing My Front-End Craftsmanship
           </h1>
@@ -87,15 +108,17 @@ export default function Portfolio() {
                     src={image.path}
                     alt={image.alt}
                     priority 
+                    // width="600"
+                    // height="120"
                     width="600"
-                    height="120"
+                    height="1600"
                   />
                 ))}
               </Slider>
             </div>
-            <div className="z-10 w-full">
+            <div className="z-10 w-full lg:flex">
               {/* Link and Index  */}
-              <div className="w-fit flex space-x-3 bg-slate-900 border-2 border-purple-500 lg:-ml-10 mt-5 lg:mx-0 mx-auto rounded-xl p-3">
+              <div className="w-fit h-fit flex space-x-3 bg-slate-900 border-2 border-purple-500 lg:-ml-10 mt-5 lg:mx-0 mx-auto rounded-xl p-3">
                 <h1 className="text-4xl border-r-2 border-slate-500 pr-1">1</h1>
                 <div>
                   <Link
@@ -106,7 +129,7 @@ export default function Portfolio() {
                     <span>Live Link</span>
                   </Link>
                   <Link
-                    href={"#"}
+                    href={"https://stringlabsolutions.vercel.app/"}
                     className="flex items-center justify-center space-x-3"
                   >
                     <FiGithub />
@@ -115,8 +138,8 @@ export default function Portfolio() {
                 </div>
               </div>
               {/* Details Information */}
-              <div className="flex flex-col lg:ml-20 lg:mt-10 mt-5">
-                <h1 className="text-2xl">String Lab Solution</h1>
+              <div className="flex flex-col text-sm lg:text-lg lg:ml-20 lg:mt-10 mt-5">
+                <h1 className="lg:text-2xl text-xl py-2">String Lab Solution</h1>
                 <p>
                   <span>Category: </span>Frontend
                 </p>
@@ -145,7 +168,9 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
+        </ParallaxLayer>
       </div>
+      </Parallax>
     </>
   );
 }
