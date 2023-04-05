@@ -18,9 +18,9 @@ export default function Portfolio() {
     });
   }, []);
   const images = [
-    { path: "/image/stringlab/stringlab11.png", alt: "stringlab1" },
-    { path: "/image/stringlab/stringlab22.png", alt: "stringlab2" },
-    { path: "/image/stringlab/stringlab33.png", alt: "stringlab3" },
+    { path: "/image/stringlab/stringlab1.png", alt: "stringlab1" },
+    { path: "/image/stringlab/stringlab2.png", alt: "stringlab2" },
+    { path: "/image/stringlab/stringlab3.png", alt: "stringlab3" },
   ];
   return (
     <>
