@@ -12,6 +12,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.15",
+    "@react-spring/parallax": "^9.7.1",
     "chart.js": "^4.2.1",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
@@ -20,6 +21,7 @@
     "react-chartjs-2": "^5.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
+    "react-spring": "^9.7.1",
     "typewriter-effect": "^2.19.0",
     "vanilla-tilt": "^1.8.0"
   },
