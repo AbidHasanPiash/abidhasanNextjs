@@ -129,7 +129,7 @@ export default function Portfolio() {
                     <span>Live Link</span>
                   </Link>
                   <Link
-                    href={"#"}
+                    href={"https://stringlabsolutions.vercel.app/"}
                     className="flex items-center justify-center space-x-3"
                   >
                     <FiGithub />
