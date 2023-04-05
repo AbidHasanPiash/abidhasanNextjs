@@ -5,16 +5,20 @@ import Slider from "../components/Slider";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { FiGithub, FiCheck } from "react-icons/fi";
 import VanillaTilt from 'vanilla-tilt';
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 export default function Portfolio() {
+  const tiltRef = useRef(null);
   useEffect(() => {
-    VanillaTilt.init(document.querySelectorAll("#tilt"), {
-      max: 25,
-      speed: 400,
-      gyroscope: false,
-    });
+    if (tiltRef.current) {
+      VanillaTilt.init(tiltRef.current, {
+        max: 25,
+        speed: 400,
+        glare: true,
+        'max-glare': 0.5,
+      });
+    }
   }, []);
   const images = [
     { path: "/image/stringlab/stringlab1.png", alt: "stringlab1" },
@@ -40,7 +44,7 @@ export default function Portfolio() {
             </h1>
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-3">
               {/* ****** */}
-              <div id="tilt" className="flex flex-col items-center justify-center">
+              <div ref={tiltRef} className="flex flex-col items-center justify-center">
                 <div className="lg:w-1/2 mx-10 my-5 lg:mx-0 lg:my-0 py-28 shadow-5xl backdrop-filter backdrop-blur-sm border border-r-0 border-b-0 border-gray-100/30 bg-white/10 p-6 rounded-xl">
                   <h1 className="text-8xl absolute top-0 right-0 font-extrabold text-white/20">01</h1>
                   <h1 className="text-sm text-justify pb-5">A web tool that can help you estimate your monthly mortgage payments. 
@@ -55,7 +59,7 @@ export default function Portfolio() {
                 </div>
               </div>
               {/* ****** */}
-              <div id="tilt" className="flex flex-col items-center justify-center">
+              <div ref={tiltRef} className="flex flex-col items-center justify-center">
                 <div className="lg:w-1/2 mx-10 my-5 lg:mx-0 lg:my-0 py-28 shadow-5xl backdrop-filter backdrop-blur-sm border border-r-0 border-b-0 border-gray-100/30 bg-white/10 p-6 rounded-xl">
                   <h1 className="text-8xl absolute top-0 right-0 font-extrabold text-white/20">02</h1>
                   <h1 className="text-sm text-justify pb-5">A web tool that can help you estimate your monthly mortgage payments. 
