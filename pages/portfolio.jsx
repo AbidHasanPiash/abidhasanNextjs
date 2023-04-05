@@ -7,7 +7,6 @@ import { FiGithub, FiCheck } from "react-icons/fi";
 import VanillaTilt from 'vanilla-tilt';
 import React, {useEffect} from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import image1 from '../public/image/parallax/image1.jpg'
 
 export default function Portfolio() {
   useEffect(() => {
