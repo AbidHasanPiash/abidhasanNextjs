@@ -27,7 +27,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className='lg:max-w-7xl lg:mx-auto mx-3 grid grid-cols-2 gap-4 mb-5 select-none'>
+        <div className='lg:max-w-7xl lg:mx-auto mx-3 grid grid-cols-2 gap-4 mb-5 select-none mt-20'>
           {/* Profile picture */}
           <div id='profile' className='tilt-container col-span-2 lg:col-span-1 lg:w-96 w-full my-4 flex flex-col overflow-hidden rounded-xl ring-1 ring-purple-900 shadow-2xl shadow-purple-500'>
             <div className='flex items-center justify-between py-2 px-4 text-xl border-b border-slate-600'>

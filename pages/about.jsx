@@ -48,7 +48,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <div className="flex flex-col space-y-10 lg:max-w-7xl mx-auto">
+        <div className="flex flex-col space-y-10 lg:max-w-7xl mx-auto mt-20">
           <div className="m-3 grid grid-cols-2">
             {/* About Me  */}
             <div className="my-5 mx-2 text-justify lg:col-span-1 col-span-2">
