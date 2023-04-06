@@ -6,12 +6,12 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import SwiperCore, { Pagination } from 'swiper/core';
 import { EffectCoverflow } from 'swiper';
+import Image from 'next/image';
 //import { Navigation } from 'swiper';
 
 SwiperCore.use([Pagination]);
 export const SwiperComponent = () => {
     const [slidesPerView, setSlidesPerView] = useState(3);
-  
     useEffect(() => {
       function handleResize() {
         if (window.innerWidth < 640) {
@@ -22,61 +22,140 @@ export const SwiperComponent = () => {
           setSlidesPerView(3);
         }
       }
-  
       window.addEventListener('resize', handleResize);
       handleResize();
-  
       return () => window.removeEventListener('resize', handleResize);
     }, []);
+    const website = [
+        {
+            title:"String Lab", 
+            category:"Frontend", 
+            tech:"React Js, TailwindCSS, JSON-server",
+            img:"/image/stringlab/stringlab1.png",
+            livelink:"#",
+            codelink:"#"
+        },
+        {
+            title:"Dashboard",
+            category:"Frontend", 
+            tech:"React Js, TailwindCSS, JSON-server, Firebase",
+            img:"/image/stringlab/stringlab1.png",
+            livelink:"#",
+            codelink:"#"
+        },
+        {
+            title:"Bonik", 
+            category:"Frontend", 
+            tech:"React Js, TailwindCSS, DaisyUI",
+            img:"/image/stringlab/stringlab1.png",
+            livelink:"#",
+            codelink:"#"
+        },
+        {
+            title:"Bhujon",
+            category:"Frontend", 
+            tech:"React Js, TailwindCSS, DaisyUI",
+            img:"/image/stringlab/stringlab1.png",
+            livelink:"#",
+            codelink:"#"
+        },
+        {
+            title:"Technofire",
+            category:"Fullstuck", 
+            tech:"Html, CSS, PHP, MySQL",
+            img:"/image/stringlab/stringlab1.png",
+            livelink:"#",
+            codelink:"#"
+        },
+    ]
   return (
     <div className="max-w-7xl h-full mx-auto">
       <Swiper
          effect={'coverflow'}
          slidesPerView={slidesPerView}
-         //  slidesPerView={'auto'}
          grabCursor={true}
          centeredSlides={true}
          loop={true}
          loopedSlides= {2}
          looppreventsslide= {"true"}
-         coverflowEffect={{
-           rotate: 0,
-           stretch: 0,
-           depth: 100,
-           modifier: 2.5,
-         }}
+         coverflowEffect={{ rotate: 0, stretch: 0, depth: 100, modifier: 2.5,}}
          pagination={{clickable: true,}}
          //navigation={{clickable: true,}}
          modules={[EffectCoverflow, Pagination]}
       >
         <SwiperSlide>
-          <div className="bg-purple-500 h-[500px] flex items-center justify-center">
-            <h2 className="text-4xl font-bold text-gray-800">Slide 1</h2>
-            <button onClick={()=> console.log("slide 1")}>Click</button>
+          <div className={`h-[500px] bg-lime-400 relative shadow-2xl group overflow-hidden rounded-xl`}>
+            <div className='absolute top-0 right-0 h-2/3 w-full rounded-bl-full overflow-hidden'>
+                <Image src={'/image/stringlab/stringlab1.png'} alt='image' width={600} height={900}/>
+            </div>
+            <div className='absolute bottom-10 left-2 mx-auto w-full text-gray-900'>
+                <h2 className="text-4xl font-bold">Landing Page</h2>
+                <p className="text-sm py-2">React Js, TailwindCSS</p>
+                <div className=''>
+                    <p> View Live </p>
+                    <p> Show Code </p>
+                </div>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-pink-500 h-[500px] flex items-center justify-center">
-            <h2 className="text-4xl font-bold text-gray-800">Slide 2</h2>
-            <button onClick={()=> console.log("slide 2")}>Click</button>
+          <div className={`h-[500px] bg-amber-400 relative shadow-2xl group overflow-hidden rounded-xl`}>
+            <div className='absolute top-0 right-0 h-2/3 w-full rounded-bl-full overflow-hidden'>
+                <Image src={'/image/stringlab/stringlab1.png'} alt='image' width={600} height={900}/>
+            </div>
+            <div className='absolute bottom-10 left-2 mx-auto w-full text-gray-900'>
+                <h2 className="text-4xl font-bold">Landing Page</h2>
+                <p className="text-sm py-2">React Js, TailwindCSS</p>
+                <div className=''>
+                    <p> View Live </p>
+                    <p> Show Code </p>
+                </div>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-yellow-500 h-[500px] flex items-center justify-center">
-            <h2 className="text-4xl font-bold text-gray-800">Slide 3</h2>
-            <button onClick={()=> console.log("slide 3")}>Click</button>
+          <div className={`h-[500px] bg-fuchsia-400 relative shadow-2xl group overflow-hidden rounded-xl`}>
+            <div className='absolute top-0 right-0 h-2/3 w-full rounded-bl-full overflow-hidden'>
+                <Image src={'/image/stringlab/stringlab1.png'} alt='image' width={600} height={900}/>
+            </div>
+            <div className='absolute bottom-10 left-2 mx-auto w-full text-gray-900'>
+                <h2 className="text-4xl font-bold">Landing Page</h2>
+                <p className="text-sm py-2">React Js, TailwindCSS</p>
+                <div className=''>
+                    <p> View Live </p>
+                    <p> Show Code </p>
+                </div>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-indigo-500 h-[500px] flex items-center justify-center">
-            <h2 className="text-4xl font-bold text-gray-800">Slide 4</h2>
-            <button onClick={()=> console.log("slide 4")}>Click</button>
+          <div className={`h-[500px] bg-rose-400 relative shadow-2xl group overflow-hidden rounded-xl`}>
+            <div className='absolute top-0 right-0 h-2/3 w-full rounded-bl-full overflow-hidden'>
+                <Image src={'/image/stringlab/stringlab1.png'} alt='image' width={600} height={900}/>
+            </div>
+            <div className='absolute bottom-10 left-2 mx-auto w-full text-gray-900'>
+                <h2 className="text-4xl font-bold">Landing Page</h2>
+                <p className="text-sm py-2">React Js, TailwindCSS</p>
+                <div className=''>
+                    <p> View Live </p>
+                    <p> Show Code </p>
+                </div>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-rose-500 h-[500px] flex items-center justify-center">
-            <h2 className="text-4xl font-bold text-gray-800">Slide 5</h2>
-            <button onClick={()=> console.log("slide 5")}>Click</button>
+          <div className={`h-[500px] bg-cyan-400 relative shadow-2xl group overflow-hidden rounded-xl`}>
+            <div className='absolute top-0 right-0 h-2/3 w-full rounded-bl-full overflow-hidden'>
+                <Image src={'/image/stringlab/stringlab1.png'} alt='image' width={600} height={900}/>
+            </div>
+            <div className='absolute bottom-10 left-2 mx-auto w-full text-gray-900'>
+                <h2 className="text-4xl font-bold">Landing Page</h2>
+                <p className="text-sm py-2">React Js, TailwindCSS</p>
+                <div className=''>
+                    <p> View Live </p>
+                    <p> Show Code </p>
+                </div>
+            </div>
           </div>
         </SwiperSlide>
       </Swiper>
