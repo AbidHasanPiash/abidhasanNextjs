@@ -1,40 +1,42 @@
-import { useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+//import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 import SwiperCore, { Pagination } from 'swiper/core';
-import { EffectCoverflow, Navigation } from 'swiper';
+import { EffectCoverflow } from 'swiper';
+//import { Navigation } from 'swiper';
 
 SwiperCore.use([Pagination]);
 export const SwiperComponent = () => {
-    const swiperElRef = useRef(null);
+    const [slidesPerView, setSlidesPerView] = useState(3);
   
     useEffect(() => {
-      // listen for Swiper events using addEventListener
-      swiperElRef.current.addEventListener('progress', (e) => {
-        const [swiper, progress] = e.detail;
-        console.log(progress);
-      });
+      function handleResize() {
+        if (window.innerWidth < 768) {
+          setSlidesPerView(2);
+        } else {
+          setSlidesPerView(3);
+        }
+      }
   
-      swiperElRef.current.addEventListener('slidechange', (e) => {
-        console.log('slide changed');
-      });
+      window.addEventListener('resize', handleResize);
+      handleResize();
+  
+      return () => window.removeEventListener('resize', handleResize);
     }, []);
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-7xl h-full mx-auto">
       <Swiper
-        ref={swiperElRef}
          effect={'coverflow'}
-         slidesPerView={3}
-         slidesPerGroup={1}
+         slidesPerView={slidesPerView}
+         //  slidesPerView={'auto'}
          grabCursor={true}
          centeredSlides={true}
          loop={true}
          loopedSlides= {2}
          looppreventsslide= {"true"}
-        //  slidesPerView={'auto'}
          coverflowEffect={{
            rotate: 0,
            stretch: 0,
@@ -42,9 +44,9 @@ export const SwiperComponent = () => {
            modifier: 2.5,
          }}
          pagination={{clickable: true,}}
-         navigation={{clickable: true,}}
-         modules={[EffectCoverflow, Pagination, Navigation]}
-        className="md:grid md:grid-cols-2 lg:grid-cols-4"
+         //navigation={{clickable: true,}}
+         modules={[EffectCoverflow, Pagination]}
+        className="flex items-center justify-center"
       >
         <SwiperSlide>
           <div className="bg-purple-500 h-80 flex items-center justify-center">
