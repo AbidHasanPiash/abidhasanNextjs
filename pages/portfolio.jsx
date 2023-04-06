@@ -6,6 +6,7 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 import { FiGithub, FiCheck } from "react-icons/fi";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Tiltcard from "@/components/portfolio/Tiltcard";
+import { SwiperComponent } from "@/components/portfolio/Swiper";
 
 export default function Portfolio() {
   const images = [
@@ -69,7 +70,8 @@ export default function Portfolio() {
           </h1>
           {/* Content with slider */}
           <div className="lg:flex w-full h-full">
-            <div className="max-w-md lg:mx-0 mx-auto">
+            <SwiperComponent/>
+          {/* <div className="max-w-md lg:mx-0 mx-auto">
               <Slider>
                 {images.map((image) => (
                   <Image
@@ -84,9 +86,8 @@ export default function Portfolio() {
                   />
                 ))}
               </Slider>
-            </div>
-            <div className="z-10 w-full lg:flex">
-              {/* Link and Index  */}
+            </div> */}
+            {/* <div className="z-10 w-full lg:flex">
               <div className="w-fit h-fit flex space-x-3 bg-slate-900 border-2 border-purple-500 lg:-ml-10 mt-5 lg:mx-0 mx-auto rounded-xl p-3">
                 <h1 className="text-4xl border-r-2 border-slate-500 pr-1">1</h1>
                 <div>
@@ -106,7 +107,6 @@ export default function Portfolio() {
                   </Link>
                 </div>
               </div>
-              {/* Details Information */}
               <div className="flex flex-col text-sm lg:text-lg lg:ml-20 lg:mt-10 mt-5">
                 <h1 className="lg:text-2xl text-xl py-2">String Lab Solution</h1>
                 <p>
@@ -134,7 +134,7 @@ export default function Portfolio() {
                 </div>
               </div>
               <h1 className="lg:hidden border-b-2 border-white shadow-neon shadow-purple-500 my-5" />
-            </div>
+            </div> */}
           </div>
         </div>
         </ParallaxLayer>
