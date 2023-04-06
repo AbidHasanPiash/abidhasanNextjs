@@ -6,6 +6,7 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 import { FiGithub, FiCheck } from "react-icons/fi";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Tiltcard from "@/components/portfolio/Tiltcard";
+import { SwiperComponent } from "@/components/portfolio/Swiper";
 
 export default function Portfolio() {
   const images = [
@@ -21,28 +22,22 @@ export default function Portfolio() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="z-0 h-full overflow-y-auto scrollbar-none">
       <Parallax pages={2}>
-      <div className="z-0 overflow-y-auto scrollbar-none">
         {/* ============Webapps=========== */}
         <ParallaxLayer speed={0.7} factor={0.5}  style={{ backgroundColor: '#0f172a' }} className="z-10">
-        <div className="h-screen lg:h-fit lg:max-w-7xl lg:mx-auto mx-3 my-10 bg-[#0f172a]">
+        <div className="lg:h-fit lg:max-w-7xl lg:mx-auto mx-3 my-20 bg-[#0f172a]">
           <div className="relative h-full text-white/80">
             <h1 className="text-2xl text-center font-bold my-10">
               Some of my Web Applications.
             </h1>
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-3">
-              {/* ****** */}
               <Tiltcard/>
-              {/* ****** */}
               <Tiltcard/>
             </div>
-            {/* <ParallaxLayer speed={0.5}> */}
             <div className="absolute z-0 lg:w-32 lg:h-32 w-36 h-36 animate-spin-slow top-1/4 lg:left-28 left-0 bg-opacity-20 bg-gradient-to-r from-blue-900 to-purple-700 rounded-full"></div>
-            {/* </ParallaxLayer> */}
             <div className="absolute z-0 lg:w-60 lg:h-60 w-44 h-44 animate-spin-slow bottom-0 right-1/2 bg-opacity-20 bg-gradient-to-r from-rose-500 to-purple-500 rounded-full"></div>
-            {/* <ParallaxLayer speed={1}> */}
             <div className="absolute z-0 lg:w-40 lg:h-40 w-36 h-36 animate-spin-slow top-1/3 lg:right-20 right-0 bg-opacity-20 bg-gradient-to-r from-emerald-700 to-cyan-500 rounded-full"></div>
-            {/* </ParallaxLayer> */}
           </div>
         </div>
         </ParallaxLayer>
@@ -63,83 +58,17 @@ export default function Portfolio() {
         </ParallaxLayer>
         {/* ============Website=========== */}
         <ParallaxLayer offset={1} factor={1.5} speed={1.5} style={{ backgroundColor: '#0f172a' }}>
-        <div className="h-fit lg:max-w-7xl lg:mx-auto mx-3">
+        <div className="lg:max-w-7xl lg:mx-auto mx-3 my-20">
           <h1 className="text-2xl text-center font-bold my-10">
             Showcasing My Front-End Craftsmanship
           </h1>
-          {/* Content with slider */}
-          <div className="lg:flex w-full h-full">
-            <div className="max-w-md lg:mx-0 mx-auto">
-              <Slider>
-                {images.map((image) => (
-                  <Image
-                    key={image.path}
-                    src={image.path}
-                    alt={image.alt}
-                    priority 
-                    // width="600"
-                    // height="120"
-                    width="600"
-                    height="1600"
-                  />
-                ))}
-              </Slider>
-            </div>
-            <div className="z-10 w-full lg:flex">
-              {/* Link and Index  */}
-              <div className="w-fit h-fit flex space-x-3 bg-slate-900 border-2 border-purple-500 lg:-ml-10 mt-5 lg:mx-0 mx-auto rounded-xl p-3">
-                <h1 className="text-4xl border-r-2 border-slate-500 pr-1">1</h1>
-                <div>
-                  <Link
-                    href={"#"}
-                    className="flex items-center justify-center space-x-3"
-                  >
-                    <HiOutlineExternalLink />
-                    <span>Live Link</span>
-                  </Link>
-                  <Link
-                    href={"https://stringlabsolutions.vercel.app/"}
-                    className="flex items-center justify-center space-x-3"
-                  >
-                    <FiGithub />
-                    <span>Show Code</span>
-                  </Link>
-                </div>
-              </div>
-              {/* Details Information */}
-              <div className="flex flex-col text-sm lg:text-lg lg:ml-20 lg:mt-10 mt-5">
-                <h1 className="lg:text-2xl text-xl py-2">String Lab Solution</h1>
-                <p>
-                  <span>Category: </span>Frontend
-                </p>
-                <p>
-                  <span>Framwork: </span> React Js{" "}
-                </p>
-                <div>
-                  <h1>Fetears:</h1>
-                  <ul className="ml-3">
-                    <li className="flex items-center justify-start space-x-2">
-                      {" "}
-                      <FiCheck /> <span>Ready for Backend</span>
-                    </li>
-                    <li className="flex items-center justify-start space-x-2">
-                      {" "}
-                      <FiCheck /> <span>Responsive</span>
-                    </li>
-                    <li className="flex items-center justify-start space-x-2">
-                      {" "}
-                      <FiCheck /> <span>All React Functionality</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <h1 className="lg:hidden border-b-2 border-white shadow-neon shadow-purple-500 my-5" />
-            </div>
+          <div>
+            <SwiperComponent/>
           </div>
         </div>
         </ParallaxLayer>
-      </div>
       </Parallax>
+      </div>
     </>
   );
 }

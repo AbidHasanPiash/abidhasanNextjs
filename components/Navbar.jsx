@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const hamburgerLine = `h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300`;
   return (
-    <nav className="hidden lg:block w-screen h-fit select-none z-50">
+    <nav className="hidden lg:block fixed top-0 backdrop-blur-sm w-screen h-fit select-none z-50">
         <div className="flex items-center justify-between max-w-7xl mx-auto py-4 px-6">
             <div>
                 <Image 
