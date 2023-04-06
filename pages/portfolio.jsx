@@ -4,18 +4,10 @@ import Image from "next/image";
 import Slider from "../components/Slider";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { FiGithub, FiCheck } from "react-icons/fi";
-import VanillaTilt from 'vanilla-tilt';
-import React, {useEffect} from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import Tiltcard from "@/components/portfolio/Tiltcard";
 
 export default function Portfolio() {
-  useEffect(() => {
-    VanillaTilt.init(document.querySelectorAll("#tilt"), {
-      max: 25,
-      speed: 400,
-      gyroscope: false,
-    });
-  }, []);
   const images = [
     { path: "/image/stringlab/stringlab1.png", alt: "stringlab1" },
     { path: "/image/stringlab/stringlab2.png", alt: "stringlab2" },
@@ -40,43 +32,17 @@ export default function Portfolio() {
             </h1>
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-3">
               {/* ****** */}
-              <div id="tilt" className="flex flex-col items-center justify-center">
-                <div className="lg:w-1/2 mx-10 my-5 lg:mx-0 lg:my-0 py-28 shadow-5xl backdrop-filter backdrop-blur-sm border border-r-0 border-b-0 border-gray-100/30 bg-white/10 p-6 rounded-xl">
-                  <h1 className="text-8xl absolute top-0 right-0 font-extrabold text-white/20">01</h1>
-                  <h1 className="text-sm text-justify pb-5">A web tool that can help you estimate your monthly mortgage payments. 
-                  </h1>
-                  <Link href={'/bankofabid'}>
-                    <div className="flex space-x-2 items-center justify-center text-xl border border-purple-500 rounded-full w-fit mx-auto px-3 py-1 
-                      hover:shadow-neon hover:shadow-purple-500 hover:bg-purple-500 hover: text-white">
-                      <button>Bank of Abid </button>
-                      <HiOutlineExternalLink/>
-                    </div>
-                  </Link>
-                </div>
-              </div>
+              <Tiltcard/>
               {/* ****** */}
-              <div id="tilt" className="flex flex-col items-center justify-center">
-                <div className="lg:w-1/2 mx-10 my-5 lg:mx-0 lg:my-0 py-28 shadow-5xl backdrop-filter backdrop-blur-sm border border-r-0 border-b-0 border-gray-100/30 bg-white/10 p-6 rounded-xl">
-                  <h1 className="text-8xl absolute top-0 right-0 font-extrabold text-white/20">02</h1>
-                  <h1 className="text-sm text-justify pb-5">A web tool that can help you estimate your monthly mortgage payments. 
-                  </h1>
-                  <Link href={'/bankofabid'}>
-                    <div className="flex space-x-2 items-center justify-center text-xl border border-purple-500 rounded-full w-fit mx-auto px-3 py-1 
-                      hover:shadow-neon hover:shadow-purple-500 hover:bg-purple-500 hover: text-white">
-                      <button>Bank of Abid </button>
-                      <HiOutlineExternalLink/>
-                    </div>
-                  </Link>
-                </div>
-              </div>
+              <Tiltcard/>
             </div>
-            <ParallaxLayer speed={0.5}>
+            {/* <ParallaxLayer speed={0.5}> */}
             <div className="absolute z-0 lg:w-32 lg:h-32 w-36 h-36 animate-spin-slow top-1/4 lg:left-28 left-0 bg-opacity-20 bg-gradient-to-r from-blue-900 to-purple-700 rounded-full"></div>
-            </ParallaxLayer>
+            {/* </ParallaxLayer> */}
             <div className="absolute z-0 lg:w-60 lg:h-60 w-44 h-44 animate-spin-slow bottom-0 right-1/2 bg-opacity-20 bg-gradient-to-r from-rose-500 to-purple-500 rounded-full"></div>
-            <ParallaxLayer speed={1}>
+            {/* <ParallaxLayer speed={1}> */}
             <div className="absolute z-0 lg:w-40 lg:h-40 w-36 h-36 animate-spin-slow top-1/3 lg:right-20 right-0 bg-opacity-20 bg-gradient-to-r from-emerald-700 to-cyan-500 rounded-full"></div>
-            </ParallaxLayer>
+            {/* </ParallaxLayer> */}
           </div>
         </div>
         </ParallaxLayer>
@@ -88,6 +54,9 @@ export default function Portfolio() {
               <h1 className="lg:text-4xl text-lg font-bold">&quot;<span className="lg:text-7xl text-2xl">Art</span> is not what you see,
                 <br />but what you <span className="lg:text-7xl text-2xl">make</span> others see.&quot;</h1>
               <p className="text-right mt-4">- Edgar Degas</p>
+              <ParallaxLayer speed={1}>
+              <div className="absolute top-1/2 inset-x-1/2 z-0 lg:w-40 lg:h-40 w-36 h-36 animate-spin-slow bg-opacity-20 bg-gradient-to-r from-emerald-700 to-cyan-500 rounded-full"></div>
+              </ParallaxLayer>
             </div>
           </div>
         </div>
