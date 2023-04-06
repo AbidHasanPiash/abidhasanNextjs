@@ -29,7 +29,7 @@ export const SwiperComponent = () => {
       return () => window.removeEventListener('resize', handleResize);
     }, []);
   return (
-    <div className="max-w-7xl h-full mx-auto border">
+    <div className="max-w-7xl h-full mx-auto">
       <Swiper
          effect={'coverflow'}
          slidesPerView={slidesPerView}
