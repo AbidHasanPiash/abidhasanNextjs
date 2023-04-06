@@ -23,7 +23,7 @@ export default function Portfolio() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Parallax pages={2}>
-      <div className="z-0 overflow-y-auto scrollbar-none">
+      <div className="z-0 h-full overflow-y-auto scrollbar-none">
         {/* ============Webapps=========== */}
         <ParallaxLayer speed={0.7} factor={0.5}  style={{ backgroundColor: '#0f172a' }} className="z-10">
         <div className="h-screen lg:h-fit lg:max-w-7xl lg:mx-auto mx-3 my-10 bg-[#0f172a]">

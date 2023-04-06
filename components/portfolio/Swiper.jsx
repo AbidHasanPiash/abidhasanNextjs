@@ -14,9 +14,11 @@ export const SwiperComponent = () => {
   
     useEffect(() => {
       function handleResize() {
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 640) {
+          setSlidesPerView(1.2);
+        } else if (window.innerWidth < 1024) {
           setSlidesPerView(2);
-        } else {
+        }else {
           setSlidesPerView(3);
         }
       }
@@ -27,7 +29,7 @@ export const SwiperComponent = () => {
       return () => window.removeEventListener('resize', handleResize);
     }, []);
   return (
-    <div className="max-w-7xl h-full mx-auto">
+    <div className="max-w-7xl h-full mx-auto border">
       <Swiper
          effect={'coverflow'}
          slidesPerView={slidesPerView}
@@ -46,34 +48,33 @@ export const SwiperComponent = () => {
          pagination={{clickable: true,}}
          //navigation={{clickable: true,}}
          modules={[EffectCoverflow, Pagination]}
-        className="flex items-center justify-center"
       >
         <SwiperSlide>
-          <div className="bg-purple-500 h-80 flex items-center justify-center">
+          <div className="bg-purple-500 h-[500px] flex items-center justify-center">
             <h2 className="text-4xl font-bold text-gray-800">Slide 1</h2>
             <button onClick={()=> console.log("slide 1")}>Click</button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-pink-500 h-80 flex items-center justify-center">
+          <div className="bg-pink-500 h-[500px] flex items-center justify-center">
             <h2 className="text-4xl font-bold text-gray-800">Slide 2</h2>
             <button onClick={()=> console.log("slide 2")}>Click</button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-yellow-500 h-80 flex items-center justify-center">
+          <div className="bg-yellow-500 h-[500px] flex items-center justify-center">
             <h2 className="text-4xl font-bold text-gray-800">Slide 3</h2>
             <button onClick={()=> console.log("slide 3")}>Click</button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-indigo-500 h-80 flex items-center justify-center">
+          <div className="bg-indigo-500 h-[500px] flex items-center justify-center">
             <h2 className="text-4xl font-bold text-gray-800">Slide 4</h2>
             <button onClick={()=> console.log("slide 4")}>Click</button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-rose-500 h-80 flex items-center justify-center">
+          <div className="bg-rose-500 h-[500px] flex items-center justify-center">
             <h2 className="text-4xl font-bold text-gray-800">Slide 5</h2>
             <button onClick={()=> console.log("slide 5")}>Click</button>
           </div>
