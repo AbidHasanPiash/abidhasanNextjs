@@ -10,6 +10,7 @@ export default function Tiltcard() {
         VanillaTilt.init(tiltRef.current, {
           max: 25,
           speed: 400,
+          gyroscope: false,
         });
       }
     }, []);
