@@ -49,7 +49,7 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-col space-y-10 lg:max-w-7xl mx-auto mt-56">
+      <div className="flex flex-col space-y-10 lg:max-w-7xl mx-auto mt-20">
         <IdCard/>
         <div>
           <div className="m-3 grid grid-cols-2">
