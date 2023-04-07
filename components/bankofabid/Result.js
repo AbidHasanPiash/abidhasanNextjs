@@ -32,16 +32,14 @@ const Result = ({ data }) => {
   };
 
   return (
-    <Stack gap={3}>
+    <div className="w-full h-full">
       <Typography textAlign="center" variant="h5">
         Monthly Payment: $ {monthlyPayment.toFixed(2)}
       </Typography>
-      <Stack direction="row" justifyContent="center">
-        <div>
-          <Pie data={pieChartData} />
-        </div>
-      </Stack>
-    </Stack>
+      <div className="flex items-center justify-center">
+        <Pie data={pieChartData} />
+      </div>
+    </div>
   );
 };
 
