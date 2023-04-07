@@ -30,7 +30,7 @@ export default function Index() {
     <div className="lg:max-w-7xl lg:mx-auto mx-3 font-mono text-[#cbd5e1]">
       <Navbar />
       <Container maxWidth="xl" sx={{marginTop:4}}>
-        <Grid container spacing={5} alignItems="center">
+        {/* <Grid container spacing={5} alignItems="center">
           <Grid item xs={12} md={6}>
             <SliderSelect data={data} setData={setData} />
             <TenureSelect data={data} setData={setData}/>
@@ -38,7 +38,16 @@ export default function Index() {
           <Grid item xs={12} md={6}>
             <Result data={data}/>
           </Grid>
-        </Grid>
+        </Grid> */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div>
+            <SliderSelect data={data} setData={setData} />
+            <TenureSelect data={data} setData={setData}/>
+          </div>
+          <div>
+            <Result data={data}/>
+          </div>
+        </div>
       </Container>
     </div>
     <CssBaseline />

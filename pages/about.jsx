@@ -4,6 +4,8 @@ import Link from "next/link";
 import { TbLocationFilled } from "react-icons/tb";
 import { ImPhone } from "react-icons/im";
 import { SiGithub, SiLinkedin, SiGmail, SiFacebook } from "react-icons/si";
+import Image from "next/image";
+import IdCard from "@/components/about/IdCard";
 
 
 export default function About() {
@@ -47,8 +49,9 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        <div className="flex flex-col space-y-10 lg:max-w-7xl mx-auto mt-20">
+      <div className="flex flex-col space-y-10 lg:max-w-7xl mx-auto mt-20">
+        <IdCard/>
+        <div>
           <div className="m-3 grid grid-cols-2">
             {/* About Me  */}
             <div className="my-5 mx-2 text-justify lg:col-span-1 col-span-2">
