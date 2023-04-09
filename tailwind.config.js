@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       animation: {
         'spin-slow': 'spin 3s linear infinite',
+        'spin-slow2': 'spin 15s linear infinite',
       },
       boxShadow: {
         neon: '0px 5px 50px 12px',

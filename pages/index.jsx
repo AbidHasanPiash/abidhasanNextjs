@@ -1,23 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image';
-import ProfilePicture from '../public/image/profile.png'
-import {RiCloseFill} from 'react-icons/ri';
-import {SiReact, SiNodedotjs, SiHtml5, SiCss3, SiJavascript, SiTailwindcss, SiFirebase, SiGithub, SiJira, SiCanva} from 'react-icons/si';
-import {FiSquare, FiMinus} from 'react-icons/fi';
-import TextWithColor from '@/components/TextWithColor';
-import VanillaTilt from 'vanilla-tilt';
-import React, {useEffect} from 'react';
-
+import BtnTwoSideGlow from '@/components/common/BtnTwoSideGlow'
+import Image from 'next/image'
+import profile from '../public//image/profile.png'
+import Stamp from '@/components/common/Stamp';
 export default function Home() {
-  useEffect(() => {
-    VanillaTilt.init(document.querySelector("#profile"), {
-      max: 25,
-      speed: 400,
-      gyroscope: false,
-      glare: true,
-      "max-glare": 1,
-    });
-  }, []);
   return (
     <>
       <Head>
@@ -26,68 +12,29 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <div className='lg:max-w-7xl lg:mx-auto mx-3 grid grid-cols-2 gap-4 mb-5 select-none mt-20'>
-          {/* Profile picture */}
-          <div id='profile' className='tilt-container col-span-2 lg:col-span-1 lg:w-96 w-full my-4 flex flex-col overflow-hidden rounded-xl ring-1 ring-purple-900 shadow-2xl shadow-purple-500'>
-            <div className='flex items-center justify-between py-2 px-4 text-xl border-b border-slate-600'>
-              <h1>Abid Hasan.</h1>
-              <div className='flex items-center justify-center space-x-3'>
-                  <FiMinus size={15}/>
-                  <FiSquare size={15}/>
-                  <RiCloseFill size={20}/>
-              </div>
-            </div>
-            <Image 
-              src={ProfilePicture} 
-              priority
-              draggable="false"
-              alt="ProfilePicture"
-              className='mx-auto object-cover select-none lg:hover:scale-110 duration-300 transform z-20'
-            />
+      <div className='lg:max-w-7xl lg:mx-auto mx-3 mt-20'>
+        <div className='h-[550px] w-[1125px] grid grid-cols-2 mx-auto'>
+          <div className='flex flex-col items-start justify-center space-y-4'>
+            <h1 className='text-5xl font-extrabold'>The Web Designer That You Were Waiting For,</h1>
+            <p>Hi, I create degital products over the internet.</p>
+            <BtnTwoSideGlow text='Get Started'/>
           </div>
-          {/* Text about me */}
-          <TextWithColor/>
-          {/* My Expertise  */}
-          <div className='col-start-1 col-span-2 lg:col-start-2 h-full w-full mt-4 flex flex-col rounded-xl ring-1 ring-purple-900 shadow-2xl shadow-purple-500 hover:scale-105 duration-200'>
-            <div className='flex items-center justify-between py-2 px-4 lg:text-xl border-b border-slate-600'>
-              <h1>My Expertise.</h1>
-              <div className='flex items-center justify-center space-x-3'>
-                  <FiMinus size={15}/>
-                  <FiSquare size={15}/>
-                  <RiCloseFill size={20}/>
+          <div className='relative border border-gray-700 rounded-full'>
+            <div className='absolute translate-x-[70%] translate-y-[30%] flex items-center justify-center rotate-12 w-72 h-80 
+              bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 rounded-xl overflow-hidden'>
+            </div>
+            <div className='absolute translate-x-[35%] translate-y-[40%] -rotate-3 w-72 h-80 rounded-xl overflow-hidden'>
+              <div className='w-full h-full relative flex items-end bg-gradient-to-r from-violet-200 to-pink-200'>
+                <div className='w-60 h-60 absolute bottom-5 left-6 bg-gradient-to-r from-fuchsia-500 to-purple-500 rounded-full shadow-5xl'/>
+                <Image src={profile} alt='profile' className='z-10'/>
               </div>
             </div>
-            <div className='p-3 space-y-5 lg:text-xl'>
-              <div className='flex items-center justify-between'>
-                <h1>Frontend</h1>
-                <div className='flex items-center justify-center space-x-3'>
-                  <SiReact size={25}/>
-                  <SiJavascript size={25}/>
-                  <SiTailwindcss size={25}/>
-                  <SiHtml5 size={25}/>
-                  <SiCss3 size={25}/>
-                </div>
-              </div>
-              <div className='flex items-center justify-between'>
-                <h1>Backend</h1>
-                <div className='flex items-center justify-center space-x-3'>
-                  <SiNodedotjs size={25}/>
-                </div>
-              </div>
-              <div className='flex items-center justify-between'>
-                <h1>Tools</h1>
-                <div className='flex items-center justify-center space-x-3'>
-                  <SiFirebase size={25}/>
-                  <SiGithub size={25}/>
-                  <SiJira size={25}/>
-                  <SiCanva size={25}/>
-                </div>
-              </div>
+            <div className='w-fit h-fit absolute top-20 left-10 rounded-full border-dotted border-[#c0f] bg-white/70 backdrop-blur-sm'>
+              <Stamp text='Creative Developer.'/>
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </>
   )
 }
