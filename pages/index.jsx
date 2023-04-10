@@ -12,24 +12,39 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='lg:max-w-7xl lg:mx-auto mx-3 mt-20'>
-        <div className='h-[550px] w-[1125px] grid grid-cols-2 mx-auto'>
-          <div className='flex flex-col items-start justify-center space-y-4'>
-            <h1 className='text-5xl font-extrabold'>The Web Designer That You Were Waiting For,</h1>
+      <div className='lg:max-w-7xl lg:mx-auto mx-3 lg:mt-20'>
+        <div className='lg:h-[550px] lg:w-[1125px] grid grid-cols-1 lg:grid-cols-2 lg:mx-auto'>
+          {/* Text and Button */}
+          <div className='flex flex-col items-start lg:justify-center space-y-4 pt-10'>
+            <h1 className='lg:text-5xl text-3xl font-extrabold'>The Web Designer That You Were Waiting For,</h1>
             <p>Hi, I create degital products over the internet.</p>
             <BtnTwoSideGlow text='Get Started'/>
           </div>
-          <div className='relative border border-gray-700 rounded-full'>
-            <div className='absolute translate-x-[70%] translate-y-[30%] flex items-center justify-center rotate-12 w-72 h-80 
-              bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 rounded-xl overflow-hidden'>
+          {/* Picture */}
+          <div className='relative group lg:border border-gray-700 rounded-full pt-5'>
+            {/* Card Bacl part */}
+            <div className='absolute lg:translate-x-[70%] translate-x-[40%] lg:translate-y-[30%] translate-y-[10%] flex items-center justify-center rotate-12 w-52 h-60 lg:w-72 lg:h-80 duration-200
+              bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 rounded-xl overflow-hidden
+              group-hover:translate-x-[80%] group-hover:translate-y-[20%] group-hover:rotate-2'>
+                <div className='w-full h-full relative p-6'>
+                  <div className='w-10 h-10 border-t-2 border-l-2 border-white/20 absolute top-4 left-4'/>
+                  <div className='w-10 h-10 border-t-2 border-r-2 border-white/20 absolute top-4 right-4'/>
+                  <div className='w-10 h-10 border-b-2 border-r-2 border-white/20 absolute bottom-4 right-4'/>
+                  <div className='w-10 h-10 border-b-2 border-l-2 border-white/20 absolute bottom-4 left-4'/>
+                  <p>Abid Hasan</p>
+                </div>
             </div>
-            <div className='absolute translate-x-[35%] translate-y-[40%] -rotate-3 w-72 h-80 rounded-xl overflow-hidden'>
+            {/* Card Front part */}
+            <div className='absolute lg:translate-x-[35%] translate-x-[15%] lg:translate-y-[40%] translate-y-[20%] -rotate-3 w-52 h-60 lg:w-72 lg:h-80 rounded-xl overflow-hidden duration-300
+              group-hover:translate-x-[10%] group-hover:translate-y-[45%] group-hover:-rotate-6'>
               <div className='w-full h-full relative flex items-end bg-gradient-to-r from-violet-200 to-pink-200'>
-                <div className='w-60 h-60 absolute bottom-5 left-6 bg-gradient-to-r from-fuchsia-500 to-purple-500 rounded-full shadow-5xl'/>
+                <div className='lg:w-60 lg:h-60 w-40 h-40 absolute bottom-5 left-6 bg-gradient-to-r from-fuchsia-500 to-purple-500 rounded-full shadow-5xl'/>
                 <Image src={profile} alt='profile' className='z-10'/>
               </div>
             </div>
-            <div className='w-fit h-fit absolute top-20 left-10 rounded-full border-dotted border-[#c0f] bg-white/70 backdrop-blur-sm'>
+            {/* Stamp */}
+            <div className='w-fit h-fit absolute lg:top-20 lg:left-10 top-5 scale-75 lg:scale-100 rounded-full border-dotted border-[#c0f] bg-white/70 backdrop-blur-sm shadow-neon
+              lg:group-hover:scale-75 group-hover:scale-50 duration-300 delay-200'>
               <Stamp text='Creative Developer.'/>
             </div>
           </div>
