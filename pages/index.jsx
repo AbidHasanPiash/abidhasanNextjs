@@ -3,9 +3,10 @@ import Image from "next/image";
 import Stamp from "@/components/common/Stamp";
 import BtnTwoSideGlow from "@/components/common/BtnTwoSideGlow";
 import BtnCornerGlow from "@/components/common/BtnCornerGlow";
-import profile from "../public//image/profile.png";
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import TextWithColor from "@/components/TextWithColor";
+import profile from "../public//image/profile.png";
+import { Player } from '@lottiefiles/react-lottie-player';
+import codeDarkJson from "../public//json/code-dark.json";
 export default function Home() {
   return (
     <>
@@ -64,20 +65,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-4 space-x-5 p-10">
-          <div className="col-span-1 w-full h-40 flex items-center justify-center bg-rose-900 rounded-xl shadow-5xl shadow-rose-800">
-            wev design
-          </div>
-          <div className="col-span-1 w-full h-40 flex items-center justify-center ring-amber-500 ring-2 rounded-xl">
-            wev design
-          </div>
-          <div className="col-span-2 w-full h-40 flex items-center justify-center">
+        <div className="grid grid-cols-2 p-10 mx-10">
+          <div className="w-full h-40 flex items-center justify-center">
             <Player autoplay loop src="https://assets5.lottiefiles.com/packages/lf20_w51pcehl.json" style={{ height: '400px', width: '400px' }}/>
           </div>
+          <div className="col-span-1 w-full h-40 flex items-center justify-center border-2 border-orange-500 rounded-xl">
+            wev design
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center space-y-10 my-20">
+          <h1 className="text-7xl">As a Frontend Developer</h1>
+          <p className="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt tempora culpa nam hic. Consequuntur eveniet delectus inventore ab, nesciunt unde dignissimos aliquid quisquam ad itaque tenetur eligendi dolorum voluptate repellat?</p>
         </div>
         <div className="grid grid-cols-2">
           <div className="col-span-1">
-            <Player autoplay loop src="https://assets5.lottiefiles.com/packages/lf20_w51pcehl.json" style={{ height: '400px', width: '400px' }}/>
+            <Player autoplay loop src={codeDarkJson} style={{ height: '400px', width: '400px' }}/>
           </div>
           <div className="col-span-1">
             <TextWithColor/>
