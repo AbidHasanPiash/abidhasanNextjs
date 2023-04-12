@@ -4,6 +4,8 @@ import Stamp from "@/components/common/Stamp";
 import BtnTwoSideGlow from "@/components/common/BtnTwoSideGlow";
 import BtnCornerGlow from "@/components/common/BtnCornerGlow";
 import profile from "../public//image/profile.png";
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import TextWithColor from "@/components/TextWithColor";
 export default function Home() {
   return (
     <>
@@ -63,14 +65,22 @@ export default function Home() {
           </div>
         </div>
         <div className="grid grid-cols-4 space-x-5 p-10">
-          <div className="col-span-1 w-full h-40 flex items-center justify-center bg-sky-900 rounded-xl shadow-5xl shadow-sky-800">
-            web develop
-          </div>
           <div className="col-span-1 w-full h-40 flex items-center justify-center bg-rose-900 rounded-xl shadow-5xl shadow-rose-800">
             wev design
           </div>
-          <div className="col-span-2 w-full h-40 flex items-center justify-center ring-amber-500 ring-2 rounded-xl">
+          <div className="col-span-1 w-full h-40 flex items-center justify-center ring-amber-500 ring-2 rounded-xl">
             wev design
+          </div>
+          <div className="col-span-2 w-full h-40 flex items-center justify-center">
+            <Player autoplay loop src="https://assets5.lottiefiles.com/packages/lf20_w51pcehl.json" style={{ height: '400px', width: '400px' }}/>
+          </div>
+        </div>
+        <div className="grid grid-cols-2">
+          <div className="col-span-1">
+            <Player autoplay loop src="https://assets5.lottiefiles.com/packages/lf20_w51pcehl.json" style={{ height: '400px', width: '400px' }}/>
+          </div>
+          <div className="col-span-1">
+            <TextWithColor/>
           </div>
         </div>
       </div>

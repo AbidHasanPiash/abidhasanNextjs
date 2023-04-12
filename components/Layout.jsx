@@ -1,6 +1,4 @@
-import Navbar from "./Navbar"
 import NavMenu from "./NavMenu";
-import NavbarM from "./NavbarM"
 import { useRouter } from "next/router";
 
 export default function Layout({ children }) {
@@ -11,7 +9,6 @@ export default function Layout({ children }) {
       <main>
         {children}
       </main>
-      {location.asPath != '/bankofabid' && <NavbarM/>}
     </>
   )
 }
