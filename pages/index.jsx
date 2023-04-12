@@ -62,12 +62,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-4">
-          <div className="col-span-1 flex items-center justify-center">
+        <div className="grid grid-cols-4 space-x-5 p-10">
+          <div className="col-span-1 w-full h-40 flex items-center justify-center bg-sky-900 rounded-xl shadow-5xl shadow-sky-800">
             web develop
           </div>
-          <div className="col-span-1 flex items-center justify-center">wev design</div>
-          <div className="col-span-2 flex items-center justify-center">wev design</div>
+          <div className="col-span-1 w-full h-40 flex items-center justify-center bg-rose-900 rounded-xl shadow-5xl shadow-rose-800">
+            wev design
+          </div>
+          <div className="col-span-2 w-full h-40 flex items-center justify-center ring-amber-500 ring-2 rounded-xl">
+            wev design
+          </div>
         </div>
       </div>
     </>

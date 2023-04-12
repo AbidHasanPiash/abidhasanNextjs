@@ -8,7 +8,7 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Tiltcard from "@/components/portfolio/Tiltcard";
 import { SwiperComponent } from "@/components/portfolio/Swiper";
 
-export default function Portfolio() {
+export default function Works() {
   const images = [
     { path: "/image/stringlab/stringlab1.png", alt: "stringlab1" },
     { path: "/image/stringlab/stringlab2.png", alt: "stringlab2" },
