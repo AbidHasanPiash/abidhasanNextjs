@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import {SiReact, SiNodedotjs, SiNextdotjs, SiHtml5, SiCss3, SiJavascript, SiTailwindcss, SiFirebase} from 'react-icons/si';
 import Stamp from "@/components/common/Stamp";
 import BtnTwoSideGlow from "@/components/common/BtnTwoSideGlow";
 import BtnCornerGlow from "@/components/common/BtnCornerGlow";
@@ -7,7 +8,10 @@ import TextWithColor from "@/components/TextWithColor";
 import profile from "../public//image/profile.png";
 import { Player } from '@lottiefiles/react-lottie-player';
 import codeDarkJson from "../public//json/code-dark.json";
+import programmingComputerJson from "../public//json/programming-computer.json";
 export default function Home() {
+  const iconContainerStyle = `group w-full h-full rotate-12 border-r-2 border-orange-500/50 flex items-center justify-center`;
+  const iconStyle = `w-full -rotate-12 group-hover:mx-2 group-hover:text-orange-400 group-hover:scale-125 group-hover:mx-4 duration-150`;
   return (
     <>
       <Head>
@@ -19,13 +23,11 @@ export default function Home() {
       <div className="lg:max-w-7xl h-screen lg:mx-auto mt-20 px-3">
         <div className="h-3/4 lg:h-1/2 grid grid-cols-1 lg:grid-cols-2 lg:mx-auto">
           {/* Text and Button */}
-          <div className="flex flex-col items-start lg:justify-center mx-3 space-y-4">
-            <h1 className="lg:text-5xl text-3xl font-extrabold">
+          <div className="flex flex-col items-start lg:justify-center mx-3 space-y-10">
+            <h1 className="lg:text-6xl text-3xl font-extrabold">
               The Web Designer That You Were Waiting For,
             </h1>
-            <p className="text-sm lg:text-base text-justify text-white/50">Hi, I am creating stunning and intuitive user experiences with the latest front-end 
-              technologies like React, Next.js, and Tailwind CSS.</p>
-            <div className="flex space-x-3">
+            <div className="flex w-full items-center lg:items-start space-x-6">
               <BtnTwoSideGlow text="Get Started" />
               <BtnCornerGlow text="Discover." />
             </div>
@@ -65,24 +67,55 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 p-10 mx-10">
-          <div className="w-full h-40 flex items-center justify-center">
-            <Player autoplay loop src="https://assets5.lottiefiles.com/packages/lf20_w51pcehl.json" style={{ height: '400px', width: '400px' }}/>
+        <div className="grid lg:grid-cols-2 p-10 lg:mx-10">
+          <div className="h-40 flex items-center justify-center">
+            <Player autoplay loop src={programmingComputerJson} style={{ height: '400px', width: '400px' }}/>
           </div>
-          <div className="col-span-1 w-full h-40 flex items-center justify-center border-2 border-orange-500 rounded-xl">
-            wev design
+          <div className="h-40 mt-5 lg:mt-0 border-2 border-orange-500 rounded-xl">
+            <div className="h-full flex overflow-hidden">
+              <div className={iconContainerStyle}>
+                <SiReact size={35} className={iconStyle}/>
+              </div>
+              <div className={iconContainerStyle}>
+                <SiNextdotjs size={35} className={iconStyle}/>
+              </div>
+              <div className={iconContainerStyle}>
+              <SiJavascript size={35} className={iconStyle}/>
+              </div>
+              <div className={iconContainerStyle}>
+              <SiTailwindcss size={35} className={iconStyle}/>
+              </div>
+              <div className={iconContainerStyle}>
+              <SiHtml5 size={35} className={iconStyle}/>
+              </div>
+              <div className={iconContainerStyle}>
+              <SiCss3 size={35} className={iconStyle}/>
+              </div>
+              <div className={iconContainerStyle}>
+              <SiNodedotjs size={35} className={iconStyle}/>
+              </div>
+              <div className={iconContainerStyle}>
+              <SiFirebase size={35} className={iconStyle}/>
+              </div>
+            </div>
           </div>
         </div>
         <div className="flex flex-col items-center justify-center space-y-10 my-20">
-          <h1 className="text-7xl">As a Frontend Developer</h1>
-          <p className="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt tempora culpa nam hic. Consequuntur eveniet delectus inventore ab, nesciunt unde dignissimos aliquid quisquam ad itaque tenetur eligendi dolorum voluptate repellat?</p>
+          <h1 className="text-7xl font-extralight">As a Frontend Developer</h1>
+          <p className="text-sm lg:text-base px-10 text-justify">Hi, I am creating stunning and intuitive user experiences with the latest front-end 
+              technologies like React, Next.js, and Tailwind CSS.</p>
         </div>
-        <div className="grid grid-cols-2">
-          <div className="col-span-1">
-            <Player autoplay loop src={codeDarkJson} style={{ height: '400px', width: '400px' }}/>
+        <div className="grid grid-cols-2 border">
+          <div className="col-span-1 flex flex-col items-start justify-center">
+            <h1 className="text-7xl">What I Do.</h1>
+            <ul>
+              <li>SPA developement</li>
+              <li>ERP solution design</li>
+              <li>User friendly UI design</li>
+            </ul>
           </div>
           <div className="col-span-1">
-            <TextWithColor/>
+            <Player autoplay loop src={codeDarkJson}/>
           </div>
         </div>
       </div>

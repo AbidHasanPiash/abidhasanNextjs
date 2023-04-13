@@ -15,7 +15,7 @@ module.exports = {
         '5xl': "20px 20px 50px rgb(0, 0, 0, 0.5)",
       },
       fontFamily: {
-        custom: ['Roboto Mono', 'monospace'],
+        custom: ['Jost', 'sans-serif'],
       },
     },
   },

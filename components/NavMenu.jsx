@@ -29,11 +29,11 @@ export default function NavMenu() {
   }, [cursorPos]);
   return (
     <div className="relative w-screen group-target:">
-        <div className={`bg-[#2e3852] h-screen w-full fixed inset-0 flex items-center justify-end
+        <div className={`bg-[#282526] h-screen w-full fixed inset-0 flex items-center justify-end
             duration-1000 ${isOpen?'z-10 translate-x-[0%] delay-200':' z-0 translate-x-[-100%] delay-75'}`}>
             two
         </div>
-        <div className={`bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-[#0f172a] to-indigo-900
+        <div className={`bg-[#f56f5e]
             h-screen w-2/6 fixed inset-0 flex items-center justify-center cursor-none
             duration-700 ${isOpen?'z-20 translate-x-[0%]':' z-0 translate-x-[-100%] delay-200'}`}>
             <ul className="flex flex-col space-y-4 font-extrabold cursor-none">
