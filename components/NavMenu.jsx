@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from 'react';
+import GlowingCube from "./common/GlowingCube";
+import GlowingPyramid from "./common/GlowingPyramid";
 
 export default function NavMenu() {
   const navMenuItem = [
@@ -28,14 +30,16 @@ export default function NavMenu() {
     }
   }, [cursorPos]);
   return (
-    <div className="relative w-screen group-target:">
+    <div className="relative w-screen">
         <div className={`bg-[#282526] h-screen w-full fixed inset-0 flex items-center justify-end
-            duration-1000 ${isOpen?'z-10 translate-x-[0%] delay-200':' z-0 translate-x-[-100%] delay-75'}`}>
-            two
+            duration-1000 ${isOpen?'z-10 translate-x-[0%] delay-200':' z-0 translate-x-[-110%] delay-75'}`}>
+          <div className="w-96 h-96 flex items-center justify-center">
+            <GlowingCube/>
+          </div>
         </div>
         <div className={`bg-[#f56f5e]
             h-screen w-2/6 fixed inset-0 flex items-center justify-center cursor-none
-            duration-700 ${isOpen?'z-20 translate-x-[0%]':' z-0 translate-x-[-100%] delay-200'}`}>
+            duration-700 ${isOpen?'z-20 translate-x-[0%]':' z-0 translate-x-[-110%] delay-200'}`}>
             <ul className="flex flex-col space-y-4 font-extrabold cursor-none">
                 {navMenuItem.map((item, i)=>(
                 <Link key={i} href={item.link} onClick={()=>setIsOpen(false)}>
@@ -47,7 +51,7 @@ export default function NavMenu() {
                 ))}
             </ul>
         </div>
-        <div className={`fixed top-0 left-0 right-0 z-30 backdrop-blur-md ${isOpen?'cursor-none':'cursor-auto'}`}>
+        <div className={`fixed top-0 left-0 right-0 z-30  ${isOpen?'cursor-none':'delay-200 cursor-auto bg-[#0f172a] bg-opacity-70 backdrop-blur-md'}`}>
             <div className="flex items-center justify-between max-w-7xl mx-auto py-4 px-6">
                 <h1 className="text-2xl font-bold">Abid.</h1>
                 <div 

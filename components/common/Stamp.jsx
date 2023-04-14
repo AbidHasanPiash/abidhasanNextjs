@@ -11,7 +11,7 @@ export default function Stamp({text}) {
       startOffset='0'
       reversed={true}
       text={text}
-      textProps={{"style": {"fontSize": "20"}}}
+      textProps={{"style": {"fontSize": "25"}}}
       textPathProps={{"fill": "#0f172a"}}
       tspanProps={{"dy": "0"}}
       ellipseProps={null}
