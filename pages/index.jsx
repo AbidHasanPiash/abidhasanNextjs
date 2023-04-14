@@ -1,18 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
-import {SiReact, SiNodedotjs, SiNextdotjs, SiHtml5, SiCss3, SiJavascript, SiTailwindcss, SiFirebase} from 'react-icons/si';
+import {ImCheckmark2} from 'react-icons/im';
 import Stamp from "@/components/common/Stamp";
 import BtnTwoSideGlow from "@/components/common/BtnTwoSideGlow";
 import BtnCornerGlow from "@/components/common/BtnCornerGlow";
-import TextWithColor from "@/components/TextWithColor";
 import profile from "../public//image/profile.png";
 import { Player } from '@lottiefiles/react-lottie-player';
-import codeDarkJson from "../public//json/code-dark.json";
 import programmingComputerJson from "../public//json/programming-computer.json";
 import GlowingPyramid from "@/components/common/GlowingPyramid";
 export default function Home() {
-  const iconContainerStyle = `group w-full h-full rotate-12 border-r-2 border-orange-500/50 flex items-center justify-center`;
-  const iconStyle = `w-full -rotate-12 group-hover:mx-2 group-hover:text-orange-400 group-hover:scale-125 group-hover:mx-4 duration-150`;
   return (
     <>
       <Head>
@@ -29,8 +25,8 @@ export default function Home() {
               The Web Designer That You Were Waiting For,
             </h1>
             <div className="flex w-full items-center lg:items-start space-x-6">
-              <BtnTwoSideGlow text="Get Started" />
-              <BtnCornerGlow text="Discover." />
+              <BtnTwoSideGlow text="Get Started" link="/about"/>
+              <BtnCornerGlow text="Discover." link="/works"/>
             </div>
           </div>
           {/* Picture */}
@@ -68,45 +64,46 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="grid lg:grid-cols-2 lg:p-10 lg:mx-10">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between lg:p-10 lg:mx-10">
           <div className="h-40 flex items-center justify-center">
             <Player autoplay loop src={programmingComputerJson}/>
           </div>
           <div className="lg:h-40 mt-5 lg:mt-0 flex items-center justify-center">
-            <p className="text-sm lg:text-base lg:px-10">
+            <p className="text-sm lg:text-base text-justify px-10 pb-20">
               Hi, I am creating stunning and intuitive user experiences with the 
               latest front-end technologies like React, Next.js, and Tailwind CSS.</p>
           </div>
         </div>
-        <div className="lg:max-w-7xl first-line:flex flex-col items-center justify-center space-y-10 my-20 mx-5">
-          <h1 className="text-7xl font-extralight text-center">As a Frontend Developer</h1>
-          <div className="w-3/4 h-40 grid lg:grid-cols-2 gap-5 mx-auto">
-            <div className="w-full h-full bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-indigo-200 via-purple-900 to-indigo-200
+        <div className="lg:max-w-7xl h-3/4 lg:h-fit first-line:flex flex-col items-center justify-center space-y-10 my-20 mx-5">
+          <h1 className="text-7xl font-extralight lg:text-center">As a Frontend Developer.</h1>
+          <div className="lg:w-3/4 h-52 grid lg:grid-cols-2 gap-5 mx-auto">
+            <div className="bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-indigo-200 via-purple-900 to-indigo-200
               rounded-xl p-5 text-gray-900">
               <h1 className="text-2xl font-bold">Designing the user interface:</h1> 
-              <p className="text-justify">
+              <p className="text-lg text-justify pt-5">
                 Creating the visual and interactive elements that users see 
                 and interact with on websites and applications.
               </p>
             </div>
-            <div className="w-full h-full bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-yellow-200 via-red-500 to-fuchsia-500
+            <div className="bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-yellow-200 via-red-500 to-fuchsia-500
               rounded-xl p-5 text-gray-900">
               <h1 className="text-2xl font-bold">Implementing the design:</h1>
-              <p className="text-justify">
-                Using React to bring the design to life, ensuring it is responsive 
+              <p className="text-lg text-justify pt-5">
+                Using <span className="font-bold">React</span> to bring the design to life, ensuring it is responsive 
                 and collaborating with backend developers to integrate the 
                 frontend with the backend functionality.
               </p>
             </div>
           </div>
         </div>
-        <div className="h-[400px] grid lg:grid-cols-2">
+        <div className="h-[400px] grid lg:grid-cols-2 mx-5">
           <div className="col-span-1 flex flex-col items-start justify-center">
-            <h1 className="text-7xl">What I Do.</h1>
-            <ul className="pt-5 pl-10 text-lg space-y-4">
-              <li>SPA developement</li>
-              <li>ERP solution design</li>
-              <li>User friendly UI design</li>
+            <h1 className="text-7xl font-extralight ">What I Do.</h1>
+            <ul className="pt-5 lg:pl-10 text-lg space-y-4">
+              <li className="flex items-center justify-start space-x-3" ><span><ImCheckmark2/></span> <span>SPA Developement</span></li>
+              <li className="flex items-center justify-start space-x-3" ><span><ImCheckmark2/></span> <span>Web App Development</span></li>
+              <li className="flex items-center justify-start space-x-3" ><span><ImCheckmark2/></span> <span>ERP Solution Design</span></li>
+              <li className="flex items-center justify-start space-x-3" ><span><ImCheckmark2/></span> <span>User Friendly UI Design</span></li>
             </ul>
           </div>
           <div className="col-span-1 flex items-center justify-center pb-10">

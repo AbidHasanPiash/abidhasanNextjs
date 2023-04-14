@@ -1,7 +1,9 @@
+import Link from 'next/link'
 import React from 'react'
 
-export default function BtnTwoSideGlow({text}) {
+export default function BtnTwoSideGlow({text, link }) {
   return (
+    <Link href={link}>
     <div className='w-36 h-12 relative group'>
       <div className='w-10 h-3 bg-[#c0f] rounded-md absolute -bottom-px left-1/2 transform -translate-x-1/2 duration-300
         group-hover:bottom-0 group-hover:delay-75 group-hover:rounded-full group-hover:w-9/12 group-hover:h-1/2'/>
@@ -14,5 +16,6 @@ export default function BtnTwoSideGlow({text}) {
         {text}
       </button>
     </div>
+    </Link>
   )
 }
