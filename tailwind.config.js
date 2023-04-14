@@ -8,13 +8,14 @@ module.exports = {
     extend: {
       animation: {
         'spin-slow': 'spin 3s linear infinite',
+        'spin-slow2': 'spin 15s linear infinite',
       },
       boxShadow: {
         neon: '0px 5px 50px 12px',
         '5xl': "20px 20px 50px rgb(0, 0, 0, 0.5)",
       },
       fontFamily: {
-        custom: ['Roboto Mono', 'monospace'],
+        custom: ['Jost', 'sans-serif'],
       },
     },
   },
