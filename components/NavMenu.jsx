@@ -8,6 +8,7 @@ export default function NavMenu() {
     { title: "Home", link: "/" },
     { title: "My Works", link: "/works" },
     { title: "About", link: "/about" },
+    { title: "Contact", link: "/contact" },
   ];
   const router = useRouter();
   const [activePage, setActivePage] = useState('/');
