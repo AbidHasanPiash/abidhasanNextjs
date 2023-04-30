@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   return (
     <>
       {location.asPath != '/bankofabid' && <NavMenu />}
-      <main>
+      <main className="lg:max-w-7xl h-screen lg:mx-auto mt-20 px-3">
         {children}
       </main>
     </>

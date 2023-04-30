@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import {ImCheckmark2} from 'react-icons/im';
+import {BiPaintRoll, BiCodeAlt, BiGitBranch} from 'react-icons/bi';
 import Stamp from "@/components/common/Stamp";
 import BtnTwoSideGlow from "@/components/common/BtnTwoSideGlow";
 import BtnCornerGlow from "@/components/common/BtnCornerGlow";
@@ -17,77 +18,100 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="lg:max-w-7xl h-screen lg:mx-auto mt-20 px-3">
-        <div className="h-3/4 lg:h-1/2 grid grid-cols-1 lg:grid-cols-2 lg:mx-auto">
-          {/* Text and Button */}
-          <div className="flex flex-col items-start lg:justify-center mx-3 space-y-10">
-            <h1 className="lg:text-6xl text-3xl font-extrabold">
-              The Web Designer That You Were Waiting For,
-            </h1>
-            <div className="flex w-full items-center lg:items-start space-x-6">
-              <BtnTwoSideGlow text="Get Started" link="/about"/>
-              <BtnCornerGlow text="Discover." link="/works"/>
+      <div>
+        {/* hero */}
+        <div className="h-screen">
+          {/* hero - upper section */}
+          <div className="lg:h-4/6 grid lg:grid-cols-2 ">
+            {/* Text and Button */}
+            <div className="h-fit lg:h-full flex flex-col items-start lg:justify-center mx-3 space-y-10">
+              <h1 className="lg:text-6xl text-3xl lg:font-extrabold">
+                The Web Designer That You Were Waiting For,
+              </h1>
+              <div className="flex w-full items-center justify-center lg:justify-start lg:items-start space-x-6 scale-90 lg:scale-100">
+                <BtnTwoSideGlow text="Get Started." link="/about"/>
+                <BtnCornerGlow text="Discover." link="/works"/>
+              </div>
+            </div>
+            {/* Picture */}
+            <div className="w-full h-96 lg:h-full relative group select-none ">
+              {/* Card Back part */}
+              <div
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-6
+                w-52 h-60 lg:w-72 lg:h-80 rounded-xl overflow-hidden duration-200
+                group-hover:-translate-x-[10%] group-hover:-translate-y-[50%] group-hover:rotate-2"
+              >
+                <div className="w-full h-full relative p-6 bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900">
+                  <div className="w-10 h-10 border-t-2 border-l-2 border-white/20 absolute top-4 left-4" />
+                  <div className="w-10 h-10 border-t-2 border-r-2 border-white/20 absolute top-4 right-4" />
+                  <div className="w-10 h-10 border-b-2 border-r-2 border-white/20 absolute bottom-4 right-4" />
+                  <div className="w-10 h-10 border-b-2 border-l-2 border-white/20 absolute bottom-4 left-4" />
+                  <div className="h-full flex flex-col items-center justify-center">
+                    <p className="text-xl">Abid Hasan</p>
+                    <p className="text-sm">B.Sc.(Engg.) in CSE</p>
+                  </div>
+                </div>
+              </div>
+              {/* Card Front part */}
+              <div
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-3 
+                w-52 h-60 lg:w-72 lg:h-80 rounded-xl overflow-hidden duration-300
+                group-hover:-translate-x-[90%] group-hover:-translate-y-[40%] group-hover:-rotate-6"
+              >
+                <div className="w-full h-full relative flex items-end bg-gradient-to-r from-violet-200 to-pink-200">
+                  <div className="lg:w-60 lg:h-60 w-40 h-40 absolute bottom-5 left-6 bg-gradient-to-r from-fuchsia-500 to-purple-500 rounded-full shadow-5xl" />
+                  <Image src={profile} alt="profile" className="z-10" />
+                </div>
+              </div>
+              {/* Stamp */}
+              <div 
+                className="w-fit h-fit absolute left-10 top-5 lg:left-32 lg:top-24 scale-75 lg:scale-100
+                rounded-full bg-white/60 backdrop-blur-sm shadow-neon"
+              >
+                <Stamp text="Creative Developer." />
+              </div>
             </div>
           </div>
-          {/* Picture */}
-          <div className="relative group border-gray-700 select-none">
-            {/* Card Bacl part */}
-            <div
-              className="absolute lg:translate-x-[70%] translate-x-[40%] lg:translate-y-[30%] translate-y-[-40%] flex items-center justify-center rotate-12 w-52 h-60 lg:w-72 lg:h-80 duration-200
-              bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 rounded-xl overflow-hidden
-              lg:group-hover:translate-x-[80%] lg:group-hover:translate-y-[20%] group-hover:translate-x-[70%] group-hover:translate-y-[-70%] group-hover:rotate-2"
-            >
-              <div className="w-full h-full relative p-6">
-                <div className="w-10 h-10 border-t-2 border-l-2 border-white/20 absolute top-4 left-4" />
-                <div className="w-10 h-10 border-t-2 border-r-2 border-white/20 absolute top-4 right-4" />
-                <div className="w-10 h-10 border-b-2 border-r-2 border-white/20 absolute bottom-4 right-4" />
-                <div className="w-10 h-10 border-b-2 border-l-2 border-white/20 absolute bottom-4 left-4" />
-                <p>Abid Hasan</p>
-              </div>
+          {/* hero - down section */}
+          <div className="lg:h-2/6 flex flex-col-reverse lg:flex-row items-center justify-between px-3 ">
+            <div className="h-40 flex items-center justify-center">
+              <Player autoplay loop src={programmingComputerJson}/>
             </div>
-            {/* Card Front part */}
-            <div
-              className="absolute lg:translate-x-[35%] translate-x-[15%] lg:translate-y-[40%]  translate-y-[-30%] -rotate-3 w-52 h-60 lg:w-72 lg:h-80 rounded-xl overflow-hidden duration-300
-              lg:group-hover:translate-x-[10%] lg:group-hover:translate-y-[45%] group-hover:translate-x-[7%] group-hover:translate-y-[-35%] group-hover:-rotate-6"
-            >
-              <div className="w-full h-full relative flex items-end bg-gradient-to-r from-violet-200 to-pink-200">
-                <div className="lg:w-60 lg:h-60 w-40 h-40 absolute bottom-5 left-6 bg-gradient-to-r from-fuchsia-500 to-purple-500 rounded-full shadow-5xl" />
-                <Image src={profile} alt="profile" className="z-10" />
-              </div>
-            </div>
-            {/* Stamp */}
-            <div
-              className="w-fit h-fit absolute lg:top-20 lg:left-10 -top-28 scale-75 lg:scale-100 rounded-full border-dotted border-[#c0f] bg-white/70 backdrop-blur-sm shadow-neon
-              lg:group-hover:scale-75 group-hover:scale-50 duration-300 delay-200 animate-pulse group-hover:animate-none"
-            >
-              <Stamp text="Creative Developer." />
+            <div className="lg:h-40 mt-5 lg:mt-0 flex items-center justify-center">
+              <p className="lg:text-xl lg:px-10 pb-20 text-justify">
+                Hi, I am creating stunning and intuitive user experiences with the 
+                latest front-end technologies like React, Next.js, and Tailwind CSS.</p>
             </div>
           </div>
         </div>
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between lg:p-10 lg:mx-10">
-          <div className="h-40 flex items-center justify-center">
-            <Player autoplay loop src={programmingComputerJson}/>
-          </div>
-          <div className="lg:h-40 mt-5 lg:mt-0 flex items-center justify-center">
-            <p className="text-sm lg:text-base text-justify px-10 pb-20">
-              Hi, I am creating stunning and intuitive user experiences with the 
-              latest front-end technologies like React, Next.js, and Tailwind CSS.</p>
-          </div>
-        </div>
-        <div className="lg:max-w-7xl h-3/4 lg:h-fit first-line:flex flex-col items-center justify-center space-y-10 my-20 mx-5">
+        {/* services */}
+        <div className="h-4/5 lg:h-fit flex flex-col items-center justify-center py-10 px-3 space-y-10 ">
           <h1 className="text-7xl font-extralight lg:text-center">As a Frontend Developer.</h1>
-          <div className="lg:w-3/4 h-52 grid lg:grid-cols-2 gap-5 mx-auto">
-            <div className="bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-indigo-200 via-purple-900 to-indigo-200
-              rounded-xl p-5 text-gray-900">
-              <h1 className="text-2xl font-bold">Designing the user interface:</h1> 
+          {/* services container */}
+          <div className="grid lg:grid-cols-3 gap-5 mx-auto text-gray-900">
+            {/* services 1..................................... */}
+            <div className="bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-indigo-200 via-purple-900 to-indigo-200 rounded-xl p-5 relative">
+              <h1 className="text-2xl font-bold">UI Design:</h1> 
+              <BiPaintRoll className="absolute right-2 bottom-2 text-9xl text-[#6a5591]/70"/>
               <p className="text-lg text-justify pt-5">
                 Creating the visual and interactive elements that users see 
                 and interact with on websites and applications.
               </p>
             </div>
-            <div className="bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-yellow-200 via-red-500 to-fuchsia-500
-              rounded-xl p-5 text-gray-900">
+            {/* services 2..................................... */}
+            <div className="bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-yellow-200 via-red-500 to-fuchsia-500 rounded-xl p-5 relative">
               <h1 className="text-2xl font-bold">Implementing the design:</h1>
+              <BiCodeAlt className="absolute right-2 bottom-2 text-9xl text-[#cc6f3d]/70"/>
+              <p className="text-lg text-justify pt-5">
+                Using <span className="font-bold">React</span> to bring the design to life, ensuring it is responsive 
+                and collaborating with backend developers to integrate the 
+                frontend with the backend functionality.
+              </p>
+            </div>
+            {/* services 3..................................... */}
+            <div className="bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-indigo-200 via-slate-600 to-indigo-200 rounded-xl p-5 relative">
+              <h1 className="text-2xl font-bold">Implementing the design:</h1>
+              <BiGitBranch className="absolute right-2 bottom-2 text-9xl text-[#556791]/70"/>
               <p className="text-lg text-justify pt-5">
                 Using <span className="font-bold">React</span> to bring the design to life, ensuring it is responsive 
                 and collaborating with backend developers to integrate the 
@@ -96,21 +120,23 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="h-[400px] grid lg:grid-cols-2 mx-5">
+        <div className="grid lg:grid-cols-2 py-10 px-3 ">
           <div className="col-span-1 flex flex-col items-start justify-center">
             <h1 className="text-7xl font-extralight ">What I Do.</h1>
             <ul className="pt-5 lg:pl-10 text-lg space-y-4">
-              <li className="flex items-center justify-start space-x-3" ><span><ImCheckmark2/></span> <span>SPA Developement</span></li>
-              <li className="flex items-center justify-start space-x-3" ><span><ImCheckmark2/></span> <span>Web App Development</span></li>
-              <li className="flex items-center justify-start space-x-3" ><span><ImCheckmark2/></span> <span>ERP Solution Design</span></li>
-              <li className="flex items-center justify-start space-x-3" ><span><ImCheckmark2/></span> <span>User Friendly UI Design</span></li>
+              <li className="flex items-center justify-start space-x-3" ><span><ImCheckmark2/></span> <span>Designing user interfaces (UI)</span></li>
+              <li className="flex items-center justify-start space-x-3" ><span><ImCheckmark2/></span> <span>Developing responsive and user-friendly websites.</span></li>
+              <li className="flex items-center justify-start space-x-3" ><span><ImCheckmark2/></span> <span>Creating cross-browser and device-compatible websites.</span></li>
+              <li className="flex items-center justify-start space-x-3" ><span><ImCheckmark2/></span> <span>Optimizing website performance.</span></li>
+              <li className="flex items-center justify-start space-x-3" ><span><ImCheckmark2/></span> <span>Debugging and troubleshooting website issues.</span></li>
+              <li className="flex items-center justify-start space-x-3" ><span><ImCheckmark2/></span> <span>Providing ongoing website maintenance and support.</span></li>
             </ul>
           </div>
           <div className="col-span-1 flex items-center justify-center pb-10">
             <GlowingPyramid/>
           </div>
         </div>
-        <div className="h-96 flex items-end justify-center">
+        <div className="h-96 flex items-end justify-center ">
           footer
         </div>
       </div>
