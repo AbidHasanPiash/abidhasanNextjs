@@ -34,7 +34,7 @@ export default function Home() {
               </div>
             </div>
             {/* Picture */}
-            <div className="w-full h-80 lg:h-full relative group select-none ">
+            <div className="w-full h-96 lg:h-full relative group select-none ">
               {/* Card Back part */}
               <div
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-6
@@ -65,7 +65,7 @@ export default function Home() {
               </div>
               {/* Stamp */}
               <div 
-                className="w-fit h-fit absolute left-10 lg:left-32 lg:top-24 scale-75 lg:scale-100
+                className="w-fit h-fit absolute left-10 top-5 lg:left-32 lg:top-24 scale-75 lg:scale-100
                 rounded-full bg-white/60 backdrop-blur-sm shadow-neon"
               >
                 <Stamp text="Creative Developer." />
