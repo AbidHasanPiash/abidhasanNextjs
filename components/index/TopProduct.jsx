@@ -20,13 +20,12 @@ export default function TopProduct() {
             />
           </div>
           <div class="md:7/12 lg:w-1/2">
-            <h2 class="text-3xl font-bold md:text-4xl text-white">
+            <h2 class="mb-3 text-3xl font-bold md:text-4xl text-white">
               Inventory Managment System
             </h2>
             <span className='text-gray-400'>
               <ReadMore text = {text} limite = {200}/>
             </span>
-            
             <div class="divide-y space-y-4 divide-gray-800">
               <div class="mt-8 flex gap-4 md:items-center">
                 <div class="w-12 h-12 flex gap-4 rounded-full bg-indigo-900/20">
