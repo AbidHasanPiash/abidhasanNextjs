@@ -14,7 +14,7 @@ export default function Services() {
     {
       heading: "Develop Web App",
       discription:
-        "Integrate the frontend with the backend functionality and Responsive web application.",
+        "Integrate the frontend with the backend functionality and also responsive web application.",
       link: "#",
       icon: <BiCodeAlt />,
     },
@@ -28,7 +28,7 @@ export default function Services() {
   ];
   return (
     <div class="py-16">
-      <div class="xl:container m-auto px-6 md:px-12">
+      <div class="xl:container m-auto px-3 md:px-12">
         <div>
           <h1 className="text-7xl font-extralight lg:text-center">
             As a Frontend Developer.
@@ -45,10 +45,12 @@ export default function Services() {
             >
               <div class="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-gray-800">
                 <div class="space-y-2">
-                  <h5 class="text-xl font-medium text-white transition group-hover:text-primary">
-                    {" "}
-                    {service.heading}
-                  </h5>
+                  <div className="flex items-center justify-start space-x-2 text-xl font-medium text-white ">
+                    <span>{service.icon}</span>
+                    <h5 class="transition group-hover:text-primary">
+                      {service.heading}
+                    </h5>
+                  </div>
                   <p class="text-sm text-gray-300">{service.discription}</p>
                 </div>
                 <Link 

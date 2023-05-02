@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Tiltcard from "@/components/portfolio/Tiltcard";
+import Tiltcard from "@/components/works/Tiltcard";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import { SwiperComponent } from "@/components/portfolio/Swiper";
+import { SwiperComponent } from "@/components/works/Swiper";
 
 export default function Works() {
   return (

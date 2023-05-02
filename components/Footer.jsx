@@ -36,9 +36,9 @@ export default function Footer() {
     },
   ];
   return (
-    <footer class="w-full bg-gray-100 dark:bg-gray-900 py-6">
+    <footer class="w-full py-6">
       <div class="md:px-12 lg:px-28">
-        <div class="container m-auto space-y-6 text-gray-600 dark:text-gray-300">
+        <div class="container m-auto space-y-6">
           <h1 class="m-auto text-4xl" > Abid.</h1>
           <ul class="flex flex-col items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8">
             {footerLinkItem.map((item, i)=>(
