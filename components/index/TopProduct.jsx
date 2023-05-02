@@ -1,37 +1,40 @@
 import Image from "next/image";
 import React from "react";
+import { ReadMore } from "../common/Readmore";
 
 export default function TopProduct() {
+  const text = "Inventory management system built using ReactJS, providing a comprehensive solution for managing a shop's inventory. The app includes features for tracking inventory levels, creating purchase orders, managing suppliers, and generating reports. The intuitive user interface enables shop owners to quickly and easily update inventory levels, view current stock levels, and monitor sales trends. The app is scalable, allowing for easy expansion as the business grows. Built with the latest technologies, this inventory management system provides a robust and reliable solution for any shop looking to streamline their inventory management process."
   return (
     <div>
-      <div class="xl:container m-auto px-3 text-gray-600">
-        <div class="border border-gray-800 lg:p-16 rounded-3xl space-y-6 md:flex flex-row-reverse md:gap-6 justify-center md:space-y-0 lg:items-center">
-          <div class="md:5/12 lg:w-1/2">
+      <div class="xl:container m-auto px-3 md:px-12">
+        <h1 className="text-7xl font-extralight lg:text-center">Top Ranked Product</h1>
+        <div class="mt-16 text-gray-600 border border-gray-700 p-3 lg:p-16 rounded-3xl space-y-6 md:flex flex-row-reverse md:gap-6 justify-center md:space-y-0 lg:items-center">
+          <div class="group md:5/12 lg:w-1/2">
             <Image
               src="/image/stringlab/creativehi.png"
               alt="image"
               loading="lazy"
-              width="400"
-              height="600"
+              width="960"
+              height="540"
+              className="rounded-3xl group-hover:rounded-xl group-hover:scale-110 duration-150"
             />
           </div>
           <div class="md:7/12 lg:w-1/2">
             <h2 class="text-3xl font-bold md:text-4xl text-white">
-              Nuxt development is carried out by passionate developers
+              Inventory Managment System
             </h2>
-            <p class="my-8 text-gray-600 dark:text-gray-300">
-              Nobis minus voluptatibus pariatur dignissimos libero quaerat iure
-              expedita at? Asperiores nemo possimus nesciunt dicta veniam
-              aspernatur quam mollitia.
-            </p>
-            <div class="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
+            <span className='text-gray-400'>
+              <ReadMore text = {text} limite = {200}/>
+            </span>
+            
+            <div class="divide-y space-y-4 divide-gray-800">
               <div class="mt-8 flex gap-4 md:items-center">
-                <div class="w-12 h-12 flex gap-4 rounded-full bg-indigo-100 dark:bg-indigo-900/20">
+                <div class="w-12 h-12 flex gap-4 rounded-full bg-indigo-900/20">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="w-6 h-6 m-auto text-indigo-500 dark:text-indigo-400"
+                    class="w-6 h-6 m-auto text-indigo-400"
                   >
                     <path
                       fill-rule="evenodd"
@@ -41,21 +44,21 @@ export default function TopProduct() {
                   </svg>
                 </div>
                 <div class="w-5/6">
-                  <h4 class="font-semibold text-lg text-gray-700 dark:text-indigo-300">
+                  <h4 class="font-semibold text-lg text-indigo-300">
                     Chat Anytime
                   </h4>
-                  <p class="text-gray-500 dark:text-gray-400">
+                  <p class="text-gray-400">
                     Asperiores nemo possimus nesciunt quam mollitia.
                   </p>
                 </div>
               </div>
               <div class="pt-4 flex gap-4 md:items-center">
-                <div class="w-12 h-12 flex gap-4 rounded-full bg-teal-100 dark:bg-teal-900/20">
+                <div class="w-12 h-12 flex gap-4 rounded-full bg-teal-900/20">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="w-6 h-6 m-auto text-teal-600 dark:text-teal-400"
+                    class="w-6 h-6 m-auto text-teal-400"
                   >
                     <path
                       fill-rule="evenodd"
@@ -65,10 +68,10 @@ export default function TopProduct() {
                   </svg>
                 </div>
                 <div class="w-5/6">
-                  <h4 class="font-semibold text-lg text-gray-700 dark:text-teal-300">
+                  <h4 class="font-semibold text-lg text-teal-300">
                     Real Time Location
                   </h4>
-                  <p class="text-gray-500 dark:text-gray-400">
+                  <p class="text-gray-400">
                     Asperiores nemo possimus nesciunt quam mollitia.
                   </p>
                 </div>
