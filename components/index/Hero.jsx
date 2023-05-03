@@ -18,7 +18,7 @@ export default function Hero() {
             The Web Designer That You Were Looking For,
           </h1>
           <div className="flex w-full items-center justify-center lg:justify-start lg:items-start space-x-6 scale-90 lg:scale-100">
-            <BtnTwoSideGlow text="Get Started." link="/about" />
+            <BtnTwoSideGlow text="Get Started." link="/contact" />
             <BtnCornerGlow text="Discover." link="/works" />
           </div>
         </div>
@@ -54,8 +54,8 @@ export default function Hero() {
           </div>
           {/* Stamp */}
           <div
-            className="w-fit h-fit absolute left-10 top-5 lg:left-32 lg:top-24 scale-75 lg:scale-100
-                rounded-full bg-gray-300/60 backdrop-blur-sm "
+            className="w-fit h-fit absolute top-1/2 left-1/2 transform -translate-x-[150%] -translate-y-[160%] scale-75 lg:scale-100
+                rounded-full bg-white/70 backdrop-blur-sm "
           >
             <Stamp text="Creative Developer." />
           </div>
