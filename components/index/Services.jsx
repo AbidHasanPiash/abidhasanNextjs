@@ -27,7 +27,7 @@ export default function Services() {
     },
   ];
   return (
-    <div class="py-16">
+    <div class="pb-16">
       <div class="xl:container m-auto px-3 md:px-12">
         <div>
           <h1 className="text-7xl font-extralight lg:text-center">
