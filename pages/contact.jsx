@@ -49,7 +49,7 @@ export default function Contact() {
       <h1 className="text-5xl lg:text-7xl font-extralight text-center">Let&#39;s Work Together.</h1>
       <div className="m-auto xl:container px-12 sm:px-0 mx-auto">
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-          <Player autoplay loop speed={0.5} src={ballAndRingJson} />
+          <Player autoplay loop speed={0.5} src={ballAndRingJson} style={{ height: '400px', width: '400px' }}/>
         </div>
         <div className="mx-auto h-fit sm:w-max">
           <div className="m-auto py-6">
