@@ -12,7 +12,7 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.alert(`Email: ${email}, Message: ${message}`);
+    console.log(`Email: ${email}, Message: ${message}`);
     // code to send form data to backend or email
   };
   const socialLinks = [
