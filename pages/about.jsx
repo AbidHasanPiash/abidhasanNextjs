@@ -71,13 +71,6 @@ export default function About() {
               </div>
             </div>
           </div>
-          {/* Download Resume button */}
-          <button
-            className="w-fit mx-auto font-extralight text-purple-400 border-2 border-purple-500 px-2 py-1 rounded-full select-none
-            hover:shadow-neon hover:bg-purple-500 hover:text-white hover:font-extrabold hover:shadow-purple-500"
-          >
-            Download Resume
-          </button>
           {/* social media */}
           <div className="flex flex-col items-center justify-center">
             <h1>Please checkout my Social links.</h1>

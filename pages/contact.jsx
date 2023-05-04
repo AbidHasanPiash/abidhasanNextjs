@@ -5,7 +5,7 @@ import { useState } from "react";
 import {BsLinkedin, BsWhatsapp} from "react-icons/bs"
 import { SiFacebook, SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import { Player } from "@lottiefiles/react-lottie-player";
-import ballAndRingJson from "../public//json/ball-and-ring.json";
+import ballAndRingJson from "../public/json/ball-and-ring.json";
 
 export default function Contact() {
   const [email, setEmail] = useState("");
