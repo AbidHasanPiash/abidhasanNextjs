@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
 import { TbLocationFilled } from "react-icons/tb";
-import { ImPhone } from "react-icons/im";
+import { ImCheckmark2, ImPhone } from "react-icons/im";
 import { SiGithub, SiLinkedin, SiGmail, SiFacebook } from "react-icons/si";
 import IdCard from "@/components/about/IdCard";
 import Hero from "@/components/about/Hero";
-
+import Footer from "@/components/Footer";
 
 export default function About() {
   const socialLinks = [
@@ -38,56 +38,48 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="lg:max-w-7xl px-3 mx-auto mt-20 flex flex-col space-y-10 ">
-        <Hero/>
-        <IdCard/>
-        <div>
-          <div className="m-3 grid grid-cols-2">
-            {/* About Me  */}
-            <div className="my-5 mx-2 text-justify lg:col-span-1 col-span-2">
-              <h2 className="lg:text-xl text-lg font-bold mb-4">About Me.</h2>
-              <p className="mb-4 lg:text-md text-sm">
-                Hi there! My name is Abid Hasan and I am a frontend developer. I
-                have a year of experience working with web technologies,
-                including HTML, CSS, React js, Next js and Tailwind CSS.
-              </p>
-              <p className="mb-4 lg:text-md text-sm">
-                I am passionate about creating intuitive, user-friendly web
-                experiences that make peoples lives easier. In my free time, I
-                enjoy exploring new technologies, reading tech blogs, and
-                building side projects to practice my skills.
-              </p>
-              <div>
-                <div className="flex items-center justify-start space-x-3">
-                  <TbLocationFilled />
-                  <p>Banasree, Rampura, Dhaka-1219</p>
-                </div>
-                <div className="flex items-center justify-start space-x-3">
-                  <ImPhone />
-                  <Link href={"tel:01789507895"}>
-                    <p>01789507895</p>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* social media */}
-          <div className="flex flex-col items-center justify-center">
-            <h1>Please checkout my Social links.</h1>
-            <div className="p-3 flex space-x-5">
-              {socialLinks.map((social, index) => (
-                <Link href={social.link} target="_blank" key={index}>
-                  <div className="group lg:text-3xl text-2xl inline-flex items-center justify-center space-x-2 hover:text-purple-500 cursor-pointer">
-                    {social.icon}
-                    <span className="scale-0 text-[0px] lg:group-hover:text-2xl group-hover:scale-100 duration-200">
-                      {social.title}
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
+      <div className="lg:max-w-7xl px-3 mx-auto pt-16">
+        <Hero />
+        <IdCard />
+        <div className="mx-5 mt-10">
+          <h2 className="lg:text-4xl text-3xl font-bold mb-4">Education.</h2>
+          <p className="lg:text-2xl">
+            Bachelor of Science, Computer Science and Engineering.
+          </p>
+          <p className="lg:text-2xl text-gray-500">
+            Bangladesh Army University of Science & Technology (BAUST).
+          </p>
+          <p className="lg:text-lg text-sm">November 2016 - April 2021</p>
+          <ul className="p-5 space-y-2">
+            <li className="flex items-center justify-start space-x-3">
+              <span>
+                <ImCheckmark2 />
+              </span>
+              <span> Intensive course with core computer science topics.</span>
+            </li>
+            <li className="flex items-center justify-start space-x-3">
+              <span>
+                <ImCheckmark2 />
+              </span>
+              <span>
+                C, C++, Java, Data Structures, Algorithms, OOP, DBMS.
+              </span>
+            </li>
+            <li className="flex items-center justify-start space-x-3">
+              <span>
+                <ImCheckmark2 />
+              </span>
+              <span> Android application development.</span>
+            </li>
+            <li className="flex items-center justify-start space-x-3">
+              <span>
+                <ImCheckmark2 />
+              </span>
+              <span> Different software design patterns.</span>
+            </li>
+          </ul>
         </div>
+        <Footer/>
       </div>
     </>
   );

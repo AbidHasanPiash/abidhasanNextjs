@@ -55,9 +55,9 @@ export default function IdCard() {
         />
       </div>
       <div id="card2" className="lg:w-[550px] w-[390px] lg:h-80 h-60 shadow-5xl backdrop-filter backdrop-blur-sm border-l border-t border-gray-100/30 bg-white/10 py-6 rounded-xl">
-        <div className="lg:h-16 h-10 bg-black text-black pb-3">*</div>
+        <div className="lg:h-16 h-10 bg-black text-black pb-3 border-l border-l-black">*</div>
         <div className="px-6">
-          <p className="text-xs lg:text-lg">THIS V-CARD IS JUST FOR DESIGN PURPOSES</p>
+          <p>THIS V-CARD IS JUST FOR DESIGN PURPOSES</p>
           <div className="flex items-center justify-between pt-5">
             <p className="lg:text-sm text-xs text-justify pr-10">
               I am a Frontend Developer. I create creative things with the magic
