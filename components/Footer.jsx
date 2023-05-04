@@ -36,29 +36,28 @@ export default function Footer() {
     },
   ];
   return (
-    <footer class="w-full py-6">
-      <div class="md:px-12 lg:px-28">
-        <div class="container m-auto space-y-6">
-          <h1 class="m-auto text-4xl" > Abid.</h1>
-          <ul class="flex flex-col items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8">
+    <footer className="w-full py-6">
+      <div className="md:px-12 lg:px-28">
+        <div className="container m-auto space-y-6">
+          <ul className="flex flex-col items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8">
             {footerLinkItem.map((item, i)=>(
               <li key={i}>
-                <Link href={item.link} class="hover:text-purple-500">
+                <Link href={item.link} className="hover:text-purple-500">
                   {item.title}
                 </Link>
               </li>
             ))}
           </ul>
-          <div class="m-auto flex w-max items-center justify-between space-x-4">
+          <div className="m-auto flex w-max items-center justify-between space-x-4">
             {socialLinks.map((social, index) => (
               <Link href={social.link} target="_blank" key={index}>
                 {social.icon}
               </Link>
             ))}
           </div>
-          <div class="text-center">
-            <span class="text-sm tracking-wide">
-              Copyright © tailus <span id="year"></span> | All right reserved
+          <div className="text-center">
+            <span className="text-sm tracking-wide">
+              Copyright © Abid <span>2023</span> | All right reserved
             </span>
           </div>
         </div>

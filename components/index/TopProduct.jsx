@@ -8,7 +8,7 @@ export default function TopProduct() {
   return (
     <div>
       <div className="xl:container m-auto px-3 md:px-12">
-        <h1 className="text-7xl font-extralight lg:text-center">Top Ranked Product</h1>
+        <h1 className="text-7xl font-extralight lg:text-center">Top Ranked Product.</h1>
         <div className="mt-16 text-gray-600 border border-gray-700 p-3 lg:p-16 rounded-3xl space-y-6 md:flex flex-row-reverse md:gap-6 justify-center md:space-y-0 lg:items-center">
           <div className="group md:5/12 lg:w-1/2">
             <Image
@@ -29,7 +29,7 @@ export default function TopProduct() {
             </span>
             <div className="divide-y space-y-4 divide-gray-800">
               <div className="mt-8 flex gap-4">
-                <div className="w-12 h-12 flex gap-4 rounded-full bg-indigo-900/20">
+                <div className="w-12 h-12 flex gap-4 rounded-full bg-green-500/20">
                   <FcApproval className="w-8 h-8 m-auto"/>
                 </div>
                 <div className="w-5/6">
@@ -45,7 +45,7 @@ export default function TopProduct() {
                 </div>
               </div>
               <div className="pt-4 flex gap-4">
-                <div className="w-12 h-12 flex gap-4 rounded-full bg-teal-900/20">
+                <div className="w-12 h-12 flex gap-4 rounded-full bg-blue-500/20">
                   <FcLink className="w-8 h-8 m-auto"/>
                 </div>
                 <div className="w-5/6">

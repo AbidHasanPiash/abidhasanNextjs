@@ -6,7 +6,7 @@ export const ReadMore = ({ text, limite }) => {
       setIsReadMore(!isReadMore);
     };
     return (
-      <p className="w-full inline">
+      <p className="w-full inline text-justify">
         {isReadMore ? text.slice(0, limite) : text}
         <span onClick={toggleReadMore} className="text-red-500 cursor-pointer">
           {isReadMore ? "...read more" : " show less"}

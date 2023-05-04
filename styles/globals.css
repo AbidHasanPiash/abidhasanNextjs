@@ -10,6 +10,34 @@ body{
     margin-bottom: 10em;
     overflow-x: hidden;
 }
+.bg-mashGradients{
+    background-color: rgb(244, 244, 245);
+    background-image: radial-gradient(at 97% 58%, rgb(99, 102, 241) 0, transparent 36%), 
+        radial-gradient(at 8% 68%, rgb(232, 121, 249) 0, transparent 25%), 
+        radial-gradient(at 1% 38%, rgb(245, 158, 11) 0, transparent 1%), 
+        radial-gradient(at 23% 91%, rgb(17, 94, 89) 0, transparent 1%), 
+        radial-gradient(at 81% 38%, rgb(16, 185, 129) 0, transparent 12%), 
+        radial-gradient(at 18% 57%, rgb(91, 33, 182) 0, transparent 55%);
+  
+}
+.bg-mashGradients2{
+    background-color: rgb(17, 24, 39);
+    background-image: radial-gradient(at 57% 29%, rgb(244, 63, 94) 0, transparent 24%), 
+        radial-gradient(at 50% 63%, rgb(234, 179, 08) 0, transparent 37%), 
+        radial-gradient(at 79% 93%, rgb(94, 234, 212) 0, transparent 51%), 
+        radial-gradient(at 54% 98%, rgb(162, 28, 175) 0, transparent 35%), 
+        radial-gradient(at 29% 12%, rgb(162, 28, 175) 0, transparent 53%), 
+        radial-gradient(at 66% 2%, rgb(254, 215, 170) 0, transparent 32%);
+}
+.bg-mashGradients3{
+    background-color: rgb(17, 24, 39);
+    background-image: radial-gradient(at 15% 46%, rgb(209, 213, 219) 0, transparent 53%), 
+    radial-gradient(at 83% 39%, rgb(134, 25, 143) 0, transparent 53%), 
+    radial-gradient(at 66% 45%, rgb(199, 210, 254) 0, transparent 92%), 
+    radial-gradient(at 34% 4%, rgb(253, 186, 116) 0, transparent 46%), 
+    radial-gradient(at 37% 81%, rgb(185, 28, 28) 0, transparent 80%), 
+    radial-gradient(at 34% 50%, rgb(87, 83, 78) 0, transparent 41%);
+}
 /* Style for cube  */
 .cube{
     position: relative;
