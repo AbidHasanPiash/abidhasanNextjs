@@ -23,8 +23,8 @@ export default function IdCard() {
     <div className="flex flex-col lg:flex-row items-center justify-between space-y-6 lg:space-y-0 lg:px-6">
       <div id="card1" className="relative lg:w-[550px] w-[390px] lg:h-80 h-60 shadow-5xl backdrop-filter backdrop-blur-sm border-l border-t border-gray-100/30 bg-white/10 p-6 rounded-xl">
         <div className="text-center">
-          <p className="text-xs lg:text-lg">Government of the republic of Bangladesh</p>
-          <h1 className="text-xs lg:text-lg">National ID Card</h1>
+          <p className="lg:text-lg">Government of the republic of Bangladesh</p>
+          <h1 className="lg:text-lg">National ID Card</h1>
         </div>
         <div className="flex items-center justify-between lg:pt-4 pt-2">
           <div>
@@ -45,7 +45,7 @@ export default function IdCard() {
             />
           </div>
         </div>
-        <h1 className="text-center lg:text-xl lg:pt-8 pt-2">6902-550-166</h1>
+        <h1 className="text-center lg:text-xl lg:pt-8 pt-2 tracking-widest">6902-550-166</h1>
         <Image
           src={"/image/idcard/nationalsybnle.png"}
           alt="nationalsybnle"

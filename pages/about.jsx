@@ -1,17 +1,13 @@
-import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { TbLocationFilled } from "react-icons/tb";
 import { ImPhone } from "react-icons/im";
 import { SiGithub, SiLinkedin, SiGmail, SiFacebook } from "react-icons/si";
-import Image from "next/image";
 import IdCard from "@/components/about/IdCard";
+import Hero from "@/components/about/Hero";
 
 
 export default function About() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
   const socialLinks = [
     {
       title: "Github",
@@ -34,13 +30,6 @@ export default function About() {
       link: "https://www.facebook.com/meghpiash2",
     },
   ];
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsOpen(!isOpen);
-    console.log(`Email: ${email}, Message: ${message}`);
-    // code to send form data to backend or email
-  };
   return (
     <>
       <Head>
@@ -49,7 +38,8 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-col space-y-10 lg:max-w-7xl mx-auto mt-20">
+      <div className="lg:max-w-7xl px-3 mx-auto mt-20 flex flex-col space-y-10 ">
+        <Hero/>
         <IdCard/>
         <div>
           <div className="m-3 grid grid-cols-2">
@@ -80,41 +70,12 @@ export default function About() {
                 </div>
               </div>
             </div>
-            {/* contact form */}
-            <div className="my-5 mx-2 lg:flex lg:flex-col lg:items-end lg:justify-end lg:col-span-1 col-start-1 col-span-2">
-              <h1 className="mx-3 lg:text-lg">Please send me your thought</h1>
-              <form
-                onSubmit={handleSubmit}
-                className="flex flex-col space-y-3 p-3"
-              >
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  value={email}
-                  className="lg:w-96 w-full h-8 bg-purple-900 bg-opacity-50 p-3 outline-none rounded focus:ring-2 ring-purple-600"
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <textarea
-                  placeholder="Your Message"
-                  value={message}
-                  className="lg:w-96 w-full h-36 bg-purple-900 bg-opacity-50 p-3 outline-none rounded focus:ring-2 ring-purple-600"
-                  onChange={(e) => setMessage(e.target.value)}
-                />
-                <button
-                  className="bg-purple-900 bg-opacity-50 mx-auto lg:mx-0 w-fit py-1 px-7 rounded-full hover:bg-opacity-100"
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
           </div>
           {/* Download Resume button */}
           <button
             className="w-fit mx-auto font-extralight text-purple-400 border-2 border-purple-500 px-2 py-1 rounded-full select-none
             hover:shadow-neon hover:bg-purple-500 hover:text-white hover:font-extrabold hover:shadow-purple-500"
           >
-            {" "}
             Download Resume
           </button>
           {/* social media */}
@@ -132,27 +93,6 @@ export default function About() {
                 </Link>
               ))}
             </div>
-          </div>
-        </div>
-        {/* Popup message */}
-        <div
-          className={`${
-            isOpen ? "block" : "hidden"
-          } fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-20 flex justify-center items-center`}
-        >
-          <div className="bg-purple-900 p-6 rounded flex flex-col items-center justify-center">
-            <h2 className="text-lg font-bold mb-2">Thank you !!</h2>
-            <p className="mb-4">I will contact you very soon.</p>
-            <button
-              onClick={() => {
-                setIsOpen(!isOpen);
-                setEmail("");
-                setMessage("");
-              }}
-              className="mx-auto bg-purple-700 hover:bg-purple-800 py-2 px-4 rounded-full"
-            >
-              Close
-            </button>
           </div>
         </div>
       </div>

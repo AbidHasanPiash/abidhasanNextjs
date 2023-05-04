@@ -5,7 +5,7 @@ import BtnTwoSideGlow from "@/components/common/BtnTwoSideGlow";
 import BtnCornerGlow from "@/components/common/BtnCornerGlow";
 import profile from "../../public/image/profile.png";
 import { Player } from "@lottiefiles/react-lottie-player";
-import programmingComputerJson from "../../public//json/programming-computer.json";
+import programmingComputerJson from "../../public/json/programming-computer.json";
 
 export default function Hero() {
   return (
