@@ -49,7 +49,7 @@ export default function Hero() {
           >
             <div className="w-full h-full relative flex items-end bg-gradient-to-r from-violet-200 to-pink-200">
               <div className="lg:w-60 lg:h-60 w-48 h-48 absolute bottom-5 left-6 bg-gradient-to-r from-fuchsia-500 to-purple-500 rounded-full shadow-5xl" />
-              <Image src={profile} alt="profile" className="z-10" />
+              <Image src={profile} alt="profile" className="z-10" priority  />
             </div>
           </div>
           {/* Stamp */}

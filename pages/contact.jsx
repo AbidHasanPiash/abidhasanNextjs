@@ -1,10 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { useState } from "react";
 import {BsLinkedin, BsWhatsapp} from "react-icons/bs"
 import { SiFacebook, SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
+import { Player } from "@lottiefiles/react-lottie-player";
+import ballAndRingJson from "../public//json/ball-and-ring.json";
 
 export default function Contact() {
   const [email, setEmail] = useState("");
@@ -47,9 +48,12 @@ export default function Contact() {
     <div className="lg:max-w-7xl lg:mx-auto pt-20">
       <h1 className="text-5xl lg:text-7xl font-extralight text-center">Let&#39;s Work Together.</h1>
       <div className="m-auto xl:container px-12 sm:px-0 mx-auto">
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+          <Player autoplay loop speed={0.5} src={ballAndRingJson} />
+        </div>
         <div className="mx-auto h-fit sm:w-max">
           <div className="m-auto py-6">
-            <div className="rounded-3xl border border-gray-700 bg-gray-800 -mx-6 sm:-mx-10 p-8 sm:p-10">
+            <div className="rounded-3xl border border-gray-700 bg-gray-800/50 backdrop-blur-md -mx-6 sm:-mx-10 p-8 sm:p-10">
               <h3 className="text-2xl">
                 I am open to Talk.
               </h3>
