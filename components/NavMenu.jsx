@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useRef, useEffect } from "react";
 import GlowingCube from "./common/GlowingCube";
-import {MdOutlineCall} from "react-icons/md";
+import { MdOutlineCall } from "react-icons/md";
 
 export default function NavMenu() {
   const navMenuItem = [
@@ -12,7 +12,6 @@ export default function NavMenu() {
     { title: "Contact", link: "/contact" },
   ];
   const router = useRouter();
-  const [showCallText, setShowCallText] = useState(false);
   const [activePage, setActivePage] = useState("/");
   const [isOpen, setIsOpen] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
@@ -37,18 +36,6 @@ export default function NavMenu() {
       cursorRef.current.style.top = `${cursorPos.y}px`;
     }
   }, [cursorPos]);
-  const handleNavIconClick = () => {
-    setIsOpen(!isOpen);
-    if (showCallText) {
-      setShowCallText(false);
-    }
-    else {
-      setTimeout(() => {
-        setShowCallText(!showCallText);
-      }, 1000);
-    }
-    
-  }
   return (
     <div className="relative w-screen">
       <div
@@ -65,17 +52,32 @@ export default function NavMenu() {
             <div>
               <p>Find me here</p>
               <ul className="space-y-2 py-2">
-                <li className="group flex items-center justify-start space-x-2">
-                  <div className="group-hover:rotate-45 duration-150">◆</div>
-                  <p className="group-hover:line-through">Linkedin</p>
+                <li>
+                  <Link
+                    href={"https://www.linkedin.com/in/abidhasanpiash/"}
+                    className="group flex items-center justify-start space-x-2"
+                  >
+                    <div className="group-hover:rotate-45 duration-150">◆</div>
+                    <p className="group-hover:line-through">Linkedin</p>
+                  </Link>
                 </li>
-                <li className="group flex items-center justify-start space-x-2">
-                  <div className="group-hover:rotate-45 duration-150">◆</div>
-                  <p className="group-hover:line-through">Github</p>
+                <li>
+                  <Link
+                    href={"https://github.com/AbidHasanPiash"}
+                    className="group flex items-center justify-start space-x-2"
+                  >
+                    <div className="group-hover:rotate-45 duration-150">◆</div>
+                    <p className="group-hover:line-through">Github</p>
+                  </Link>
                 </li>
-                <li className="group flex items-center justify-start space-x-2">
-                  <div className="group-hover:rotate-45 duration-150">◆</div>
-                  <p className="group-hover:line-through">Facebook</p>
+                <li>
+                  <Link
+                    href={"https://www.facebook.com/meghpiash2/"}
+                    className="group flex items-center justify-start space-x-2"
+                  >
+                    <div className="group-hover:rotate-45 duration-150">◆</div>
+                    <p className="group-hover:line-through">Facebook</p>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -122,16 +124,25 @@ export default function NavMenu() {
         <div className="flex items-center justify-between max-w-7xl mx-auto py-4 px-6">
           <h1 className="text-2xl font-bold">Abid.</h1>
           <div className="flex items-center justify-center space-x-4">
-            <div className={`${showCallText ? "block" : "hidden"}`}>
-              <Link href={'tel:01789507895'}>
-                <p className="text-2xl tracking-widest hover:line-through text-fuchsia-500 flex space-x-3 items-center justify-center">
-                  <span><MdOutlineCall/></span>
+            <div
+              className={`${
+                isOpen ? "block scale-100" : "hidden scale-0"
+              } transition-transform duration-1000`}
+            >
+              <Link href={"tel:01789507895"}>
+                <p className="text-2xl tracking-widest hover:line-through flex space-x-3 items-center justify-center">
+                  <span>
+                    <MdOutlineCall />
+                  </span>
                   <span>01789507895</span>
                 </p>
               </Link>
             </div>
-            <div className={`group w-12 h-12 ${isOpen ? "bg-fuchsia-600 delay-300" : "bg-sky-600"} rounded-full flex items-center justify-center`}
-              onClick={handleNavIconClick}
+            <div
+              className={`group w-12 h-12 ${
+                isOpen ? "bg-fuchsia-600 delay-300" : "bg-sky-600"
+              } rounded-full flex items-center justify-center`}
+              onClick={() => setIsOpen(!isOpen)}
             >
               <button
                 className={`flex flex-col h-6 w-12 justify-center items-center ${
