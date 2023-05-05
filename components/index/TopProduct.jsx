@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import {FcApproval, FcLink} from "react-icons/fc"
 import { ReadMore } from "../common/Readmore";
+import Link from "next/link";
 
 export default function TopProduct() {
   const text = "Built using ReactJS, providing a comprehensive solution for managing a shop's inventory. The intuitive user interface enables shop owners to quickly and easily update inventory levels, view current stock levels, and monitor sales trends. The app is scalable, allowing for easy expansion as the business grows. Built with the latest technologies, this inventory management system provides a robust and reliable solution for any shop looking to streamline their inventory management process."
@@ -49,8 +50,10 @@ export default function TopProduct() {
                   <FcLink className="w-8 h-8 m-auto"/>
                 </div>
                 <div className="w-5/6">
-                  <h4 className="font-semibold text-lg text-[#42a5f5]">
-                    Live Preview
+                  <h4 className="font-semibold text-lg text-[#42a5f5] hover:underline">
+                    <Link href={'https://creativehidemo.vercel.app/'} target="_blank">
+                      Live Preview
+                    </Link>
                   </h4>
                   <p className="text-gray-400">
                     You can test this using test account.

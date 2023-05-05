@@ -31,21 +31,21 @@ export default function Hero() {
                 bg-gradient-to-b from-transparent via-[#0f172a] to-[#0f172a]'
             >
                 {/* Only for mobile view */}
-                <p className='lg:hidden text-7xl font-bold text-[#475e92]'>I&#39;m a</p>
+                <p className='lg:hidden text-7xl font-bold text-[#2d3d64]'>I&#39;m a</p>
                 <p className='lg:hidden text-7xl font-bold text-[#9DD7ED]'>Developer.</p>
                 <p className='lg:hidden pl-1.5 py-3 text-justify'>
                     I am a frontend developer. I have a year of experience working with web 
                     technologies, including HTML, CSS, React js, Next js and Tailwind CSS.
                 </p>
-                <span className='lg:hidden w-full flex items-center justify-center'>
-                    <BtnTwoSideGlow text='Download Resume'/>
+                <span className='lg:hidden w-full flex items-center justify-center pb-10'>
+                    <BtnTwoSideGlow text='Download Resume' link='https://drive.google.com/drive/folders/1eCzgAba6AgW-1X75eDmuQ2da7a_0K1rr?usp=sharing'/>
                 </span>
             </div>
         </div>
         {/* Only for desktop view */}
         <div className='hidden lg:flex items-center justify-self-start'>
             <div>
-                <p className='text-8xl font-bold text-[#475e92]'>I&#39;m a</p>
+                <p className='text-8xl font-bold text-[#2d3d64]'>I&#39;m a</p>
                 <p className='text-8xl font-bold text-[#9DD7ED]'>Developer.</p>
                 <p className='pl-1.5 py-3'>
                     I am a frontend developer. I have a year of experience working with web 
