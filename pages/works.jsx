@@ -32,14 +32,14 @@ export default function Works() {
         </div>
         </ParallaxLayer>
         {/* ============Extra text=========== */}
-        <ParallaxLayer offset={0.7} speed={-0.5} factor={0.5} className="z-0">
+        <ParallaxLayer offset={0.7} speed={-1} factor={0.5} className="z-0">
         <div className="lg:max-w-7xl lg:mx-auto mx-3">
           <div className="flex flex-col items-center justify-center">
             <div className="text-center">
               <h1 className="lg:text-4xl text-2xl font-extralight">&quot;Good <span className="lg:text-7xl text-4xl">design</span>  is obvious.
                 <br />Great design is <span className="lg:text-7xl text-4xl">transparent.</span>&quot;</h1>
               <p className="text-right mt-4">- Joe Sparano</p>
-              <ParallaxLayer speed={1}>
+              <ParallaxLayer speed={5}>
               <div className="absolute top-1/2 inset-x-1/2 z-0 lg:w-40 lg:h-40 w-36 h-36 animate-spin-slow bg-opacity-20 bg-gradient-to-r from-emerald-700 to-cyan-500 rounded-full"></div>
               </ParallaxLayer>
             </div>
