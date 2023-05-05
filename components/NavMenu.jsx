@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useRef, useEffect } from "react";
 import GlowingCube from "./common/GlowingCube";
+import {MdOutlineCall} from "react-icons/md";
 
 export default function NavMenu() {
   const navMenuItem = [
@@ -11,6 +12,7 @@ export default function NavMenu() {
     { title: "Contact", link: "/contact" },
   ];
   const router = useRouter();
+  const [showCallText, setShowCallText] = useState(false);
   const [activePage, setActivePage] = useState("/");
   const [isOpen, setIsOpen] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
@@ -35,6 +37,18 @@ export default function NavMenu() {
       cursorRef.current.style.top = `${cursorPos.y}px`;
     }
   }, [cursorPos]);
+  const handleNavIconClick = () => {
+    setIsOpen(!isOpen);
+    if (showCallText) {
+      setShowCallText(false);
+    }
+    else {
+      setTimeout(() => {
+        setShowCallText(!showCallText);
+      }, 1000);
+    }
+    
+  }
   return (
     <div className="relative w-screen">
       <div
@@ -107,32 +121,39 @@ export default function NavMenu() {
       >
         <div className="flex items-center justify-between max-w-7xl mx-auto py-4 px-6">
           <h1 className="text-2xl font-bold">Abid.</h1>
-          <div
-            className={`group w-12 h-12 ${
-              isOpen ? "bg-fuchsia-600 delay-300" : "bg-sky-600"
-            } rounded-full flex items-center justify-center`}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <button
-              className={`flex flex-col h-6 w-12 justify-center items-center ${
-                isOpen ? "cursor-none" : "cursor-pointer"
-              }`}
+          <div className="flex items-center justify-center space-x-4">
+            <div className={`${showCallText ? "block" : "hidden"}`}>
+              <Link href={'tel:01789507895'}>
+                <p className="text-2xl tracking-widest hover:line-through text-fuchsia-500 flex space-x-3 items-center justify-center">
+                  <span><MdOutlineCall/></span>
+                  <span>01789507895</span>
+                </p>
+              </Link>
+            </div>
+            <div className={`group w-12 h-12 ${isOpen ? "bg-fuchsia-600 delay-300" : "bg-sky-600"} rounded-full flex items-center justify-center`}
+              onClick={handleNavIconClick}
             >
-              <div
-                className={`h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300 ${
-                  isOpen
-                    ? "rotate-45 translate-y-1.5 opacity-100 group-hover:opacity-80"
-                    : "opacity-100 group-hover:opacity-80 delay-200"
+              <button
+                className={`flex flex-col h-6 w-12 justify-center items-center ${
+                  isOpen ? "cursor-none" : "cursor-pointer"
                 }`}
-              />
-              <div
-                className={`h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300 ${
-                  isOpen
-                    ? "-rotate-45 -translate-y-1.5 opacity-100 group-hover:opacity-80"
-                    : "opacity-100 group-hover:opacity-80 delay-200"
-                }`}
-              />
-            </button>
+              >
+                <div
+                  className={`h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300 ${
+                    isOpen
+                      ? "rotate-45 translate-y-1.5 opacity-100 group-hover:opacity-80"
+                      : "opacity-100 group-hover:opacity-80 delay-200"
+                  }`}
+                />
+                <div
+                  className={`h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300 ${
+                    isOpen
+                      ? "-rotate-45 -translate-y-1.5 opacity-100 group-hover:opacity-80"
+                      : "opacity-100 group-hover:opacity-80 delay-200"
+                  }`}
+                />
+              </button>
+            </div>
           </div>
         </div>
       </div>
