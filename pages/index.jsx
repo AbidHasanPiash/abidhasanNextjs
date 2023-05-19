@@ -4,6 +4,7 @@ import Services from "@/components/index/Services";
 import Skills from "@/components/index/Skills";
 import Footer from "@/components/Footer";
 import TopProduct from "@/components/index/TopProduct";
+import Design from "@/components/index/Design";
 export default function Home() {
   return (
     <>
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero/>
         <Services/>
         <TopProduct/>
+        <Design/>
         <Skills/>
         <Footer/>
       </div>
