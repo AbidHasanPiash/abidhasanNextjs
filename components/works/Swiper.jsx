@@ -7,6 +7,7 @@ import 'swiper/css/effect-coverflow';
 import SwiperCore, { Pagination } from 'swiper/core';
 import { EffectCoverflow } from 'swiper';
 import Image from 'next/image';
+import Link from 'next/link';
 //import { Navigation } from 'swiper';
 
 SwiperCore.use([Pagination]);
@@ -86,14 +87,14 @@ export const SwiperComponent = () => {
         <SwiperSlide>
           <div className={`h-[500px] bg-lime-400 relative shadow-2xl group overflow-hidden rounded-xl`}>
             <div className='absolute top-0 right-0 h-2/3 w-full rounded-bl-full overflow-hidden'>
-                <Image src={'/image/stringlab/stringlab1.png'} alt='image' width={600} height={900}/>
+                <Image src={'/image/products/restoman.png'} alt='image' width={600} height={900}/>
             </div>
             <div className='absolute bottom-10 left-2 mx-auto w-full text-gray-900'>
-                <h2 className="text-4xl font-bold">Landing Page</h2>
-                <p className="text-sm py-2">React Js, TailwindCSS</p>
+                <h2 className="text-4xl font-bold">01. Resto Man</h2>
+                <p className="text-sm py-2">Next Js, TailwindCSS</p>
                 <div className=''>
-                    <p> View Live </p>
-                    <p> Show Code </p>
+                    <p> <Link href={'https://restoman.vercel.app/'} target='_blank'>View Live</Link> </p>
+                    <p> <Link href={'https://github.com/AbidHasanPiash/bhojon.git'} target='_blank'>Show Code</Link> </p>
                 </div>
             </div>
           </div>
@@ -101,14 +102,14 @@ export const SwiperComponent = () => {
         <SwiperSlide>
           <div className={`h-[500px] bg-amber-400 relative shadow-2xl group overflow-hidden rounded-xl`}>
             <div className='absolute top-0 right-0 h-2/3 w-full rounded-bl-full overflow-hidden'>
-                <Image src={'/image/stringlab/stringlab1.png'} alt='image' width={600} height={900}/>
+                <Image src={'/image/products/creativehi.png'} alt='image' width={600} height={900}/>
             </div>
             <div className='absolute bottom-10 left-2 mx-auto w-full text-gray-900'>
-                <h2 className="text-4xl font-bold">Landing Page</h2>
+                <h2 className="text-4xl font-bold">02. Creative Hi</h2>
                 <p className="text-sm py-2">React Js, TailwindCSS</p>
                 <div className=''>
-                    <p> View Live </p>
-                    <p> Show Code </p>
+                    <p> <Link href={'https://creativehidemo.vercel.app/'} target='_blank'>View Live</Link> </p>
+                    <p> <Link href={'https://github.com/AbidHasanPiash/demo.git'} target='_blank'>Show Code</Link> </p>
                 </div>
             </div>
           </div>
@@ -116,14 +117,14 @@ export const SwiperComponent = () => {
         <SwiperSlide>
           <div className={`h-[500px] bg-fuchsia-400 relative shadow-2xl group overflow-hidden rounded-xl`}>
             <div className='absolute top-0 right-0 h-2/3 w-full rounded-bl-full overflow-hidden'>
-                <Image src={'/image/stringlab/stringlab1.png'} alt='image' width={600} height={900}/>
+                <Image src={'/image/products/tipoff.png'} alt='image' width={600} height={900}/>
             </div>
             <div className='absolute bottom-10 left-2 mx-auto w-full text-gray-900'>
-                <h2 className="text-4xl font-bold">Landing Page</h2>
-                <p className="text-sm py-2">React Js, TailwindCSS</p>
+                <h2 className="text-4xl font-bold">03. TipOFf</h2>
+                <p className="text-sm py-2">Next Js, MongoDB, TailwindCSS</p>
                 <div className=''>
-                    <p> View Live </p>
-                    <p> Show Code </p>
+                    <p> <Link href={'https://tipoff.vercel.app/'} target='_blank'>View Live</Link> </p>
+                    <p> <Link href={'https://github.com/AbidHasanPiash/tipoff.git'} target='_blank'>Show Code</Link> </p>
                 </div>
             </div>
           </div>
@@ -131,14 +132,14 @@ export const SwiperComponent = () => {
         <SwiperSlide>
           <div className={`h-[500px] bg-rose-400 relative shadow-2xl group overflow-hidden rounded-xl`}>
             <div className='absolute top-0 right-0 h-2/3 w-full rounded-bl-full overflow-hidden'>
-                <Image src={'/image/stringlab/stringlab1.png'} alt='image' width={600} height={900}/>
+                <Image src={'/image/products/stringlab1.png'} alt='image' width={600} height={900}/>
             </div>
             <div className='absolute bottom-10 left-2 mx-auto w-full text-gray-900'>
-                <h2 className="text-4xl font-bold">Landing Page</h2>
+                <h2 className="text-4xl font-bold">04. String Lab Solution</h2>
                 <p className="text-sm py-2">React Js, TailwindCSS</p>
                 <div className=''>
-                    <p> View Live </p>
-                    <p> Show Code </p>
+                    <p> <Link href={'https://stringlabsolutions.vercel.app/'} target='_blank'>View Live</Link> </p>
+                    <p> <Link href={'#'} target='_blank'>Show Code</Link> </p>
                 </div>
             </div>
           </div>
@@ -146,14 +147,14 @@ export const SwiperComponent = () => {
         <SwiperSlide>
           <div className={`h-[500px] bg-cyan-400 relative shadow-2xl group overflow-hidden rounded-xl`}>
             <div className='absolute top-0 right-0 h-2/3 w-full rounded-bl-full overflow-hidden'>
-                <Image src={'/image/stringlab/stringlab1.png'} alt='image' width={600} height={900}/>
+                <Image src={'/image/products/abid.png'} alt='image' width={600} height={900}/>
             </div>
             <div className='absolute bottom-10 left-2 mx-auto w-full text-gray-900'>
-                <h2 className="text-4xl font-bold">Landing Page</h2>
-                <p className="text-sm py-2">React Js, TailwindCSS</p>
+                <h2 className="text-4xl font-bold">05. Portfolio</h2>
+                <p className="text-sm py-2">Next Js, TailwindCSS</p>
                 <div className=''>
-                    <p> View Live </p>
-                    <p> Show Code </p>
+                    <p> <Link href={'https://abidhasan.vercel.app/'} target='_blank'>View Live</Link> </p>
+                    <p> <Link href={'https://github.com/AbidHasanPiash/abidhasan-portfolio.git'} target='_blank'>Show Code</Link> </p>
                 </div>
             </div>
           </div>

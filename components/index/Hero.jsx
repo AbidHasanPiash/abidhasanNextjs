@@ -15,7 +15,7 @@ export default function Hero() {
         {/* Text and Button */}
         <div className="h-fit lg:h-full flex flex-col items-start lg:justify-center mx-3 space-y-10">
           <h1 className="lg:text-6xl text-3xl font-extrabold text-center lg:text-start">
-            The Web Designer That You Were Looking For,
+            The Web Developer That You Were Looking For,
           </h1>
           <div className="flex w-full items-center justify-center lg:justify-start lg:items-start space-x-6 scale-90 lg:scale-100">
             <BtnTwoSideGlow text="Get Started." link="/contact" />
