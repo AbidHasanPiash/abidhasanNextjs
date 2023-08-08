@@ -5,7 +5,7 @@ import { ReadMore } from "../common/Readmore";
 import Link from "next/link";
 
 export default function TopProduct() {
-  const text = "Built using ReactJS, providing a comprehensive solution for managing a shop's inventory. The intuitive user interface enables shop owners to quickly and easily update inventory levels, view current stock levels, and monitor sales trends. The app is scalable, allowing for easy expansion as the business grows. Built with the latest technologies, this inventory management system provides a robust and reliable solution for any shop looking to streamline their inventory management process."
+  const text = "Embrace Resto Man's innovative tools, data-driven insights, and seamless experience to unlock the full potential of your restaurant's success."
   return (
     <div>
       <div className="xl:container m-auto px-3 md:px-12">
@@ -13,20 +13,20 @@ export default function TopProduct() {
         <div className="mt-16 text-gray-600 border border-gray-700 p-3 lg:p-16 rounded-3xl space-y-6 md:flex flex-row-reverse md:gap-6 justify-center md:space-y-0 lg:items-center">
           <div className="group md:5/12 lg:w-1/2">
             <Image
-              src="/image/stringlab/creativehi.png"
+              src="/image/products/restoman.png"
               alt="image"
               loading="lazy"
               width="960"
               height="540"
-              className="rounded-3xl group-hover:rounded-xl group-hover:scale-110 duration-150"
+              className="rounded-3xl group-hover:rounded-xl group-hover:scale-110 duration-150 ring-2 ring-blue-300"
             />
           </div>
           <div className="md:7/12 lg:w-1/2">
             <h2 className="mb-3 text-3xl font-bold md:text-4xl text-white">
-              Inventory Managment System
+              Resto Man.
             </h2>
             <span className='text-gray-400'>
-              <ReadMore text = {text} limite = {150}/>
+              {text}
             </span>
             <div className="divide-y space-y-4 divide-gray-800">
               <div className="mt-8 flex gap-4">
@@ -38,10 +38,10 @@ export default function TopProduct() {
                     Features
                   </h4>
                   <ul className="text-gray-400">
-                    <li>- Tracking inventory levels</li>
-                    <li>- Creating purchase orders</li>
-                    <li>- Managing suppliers</li>
-                    <li>- Generating reports</li>
+                    <li>- Daily Finance Reports</li>
+                    <li>- Data Analysis</li>
+                    <li>- Advanced Customer Insights</li>
+                    <li>- Email Support</li>
                   </ul>
                 </div>
               </div>
@@ -51,7 +51,7 @@ export default function TopProduct() {
                 </div>
                 <div className="w-5/6">
                   <h4 className="font-semibold text-lg text-[#42a5f5] hover:underline">
-                    <Link href={'https://creativehidemo.vercel.app/'} target="_blank">
+                    <Link href={'https://restoman.vercel.app/'} target="_blank">
                       Live Preview
                     </Link>
                   </h4>

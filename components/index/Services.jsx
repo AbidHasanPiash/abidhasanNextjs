@@ -7,7 +7,7 @@ export default function Services() {
     {
       heading: "UI/UX Design",
       discription:
-        "Creating the visual and interactive elements that users see and interact with on websites and applications.",
+        "Creating the visual and interactive elements that users see and interact with.",
       link: "#",
       icon: <BiPaintRoll />,
     },
